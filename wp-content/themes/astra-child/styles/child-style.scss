@@ -1,0 +1,468 @@
+
+/*---------------------- Declaration google fonts -----------------------------------------------*/
+/*------- Titres font Space Mono-------*/
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+.space-mono-regular {
+    font-family: "Space Mono", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.space-mono-bold {
+font-family: "Space Mono", serif;
+font-weight: 700;
+font-style: normal;
+}
+
+.space-mono-regular-italic {
+font-family: "Space Mono", serif;
+font-weight: 400;
+font-style: italic;
+}
+
+.space-mono-bold-italic {
+font-family: "Space Mono", serif;
+font-weight: 700;
+font-style: italic;
+}
+
+/*------- Paragraphes font Poppins-------*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.poppins-thin {
+    font-family: "Poppins", serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.poppins-extralight {
+    font-family: "Poppins", serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.poppins-light {
+    font-family: "Poppins", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.poppins-regular {
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.poppins-medium {
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.poppins-semibold {
+    font-family: "Poppins", serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.poppins-bold {
+    font-family: "Poppins", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.poppins-extrabold {
+    font-family: "Poppins", serif;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.poppins-black {
+    font-family: "Poppins", serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.poppins-thin-italic {
+    font-family: "Poppins", serif;
+    font-weight: 100;
+    font-style: italic;
+}
+
+.poppins-extralight-italic {
+    font-family: "Poppins", serif;
+    font-weight: 200;
+    font-style: italic;
+}
+
+.poppins-light-italic {
+    font-family: "Poppins", serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.poppins-regular-italic {
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.poppins-medium-italic {
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.poppins-semibold-italic {
+    font-family: "Poppins", serif;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.poppins-bold-italic {
+    font-family: "Poppins", serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.poppins-extrabold-italic {
+    font-family: "Poppins", serif;
+    font-weight: 800;
+    font-style: italic;
+}
+
+.poppins-black-italic {
+    font-family: "Poppins", serif;
+    font-weight: 900;
+    font-style: italic;
+}
+
+/*--------------------------------------------- Icônes reseaux sociaux header ------------------------------*/
+.header-social-item {
+    transition: transform 0.3s ease-in-out;
+    //border: 3px solid orange;//////
+    &:hover {
+        transform: scale(1.6);
+    }
+}
+
+/*--------------------------------------------- Modale de contact -------------------------------------------*/
+#popup-modale {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+    flex-direction: column !important;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    z-index: 200;
+    opacity: 0;
+}
+
+.form-modale {
+    display: block;
+    position:relative;
+    top: -25vh;
+    width: 40vw;
+    height:60vh;
+}
+
+.div-form-contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display:block;
+    position: absolute;
+    top: -40vh;
+    text-transform: uppercase;
+    background-color: white;
+    border: 5px solid black;//////
+
+    img {
+        display:block;
+        width: 100vw;
+    }
+
+    label {
+        display: flex;
+        flex-direction: column;
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+
+    input {
+        display: flex;
+        flex-direction: column;
+        border-radius: 4px;
+    }
+
+    textarea {
+        display: flex;
+        flex-direction: column;
+        height: 5em;
+        border-radius: 4px;
+    }
+
+    p input[type="submit"] {
+        display: flex;
+        margin-left: 20%;
+        margin-right: 20%;
+        width:60%;
+        color: #313144;
+        background-color: #E5E5E5;
+        padding: 20px 40px;
+        border-radius: 4px;
+        transition: transform 0.3s ease-in-out;
+        &:hover {   
+            color: #E00000;
+            background-color: #FFD6D6;
+            transform: scale(1.05);
+        }
+    }
+}
+
+//Style message d'erreur sur les saisies de champs
+.wpcf7-response-output {
+    background: white;
+    border: 3px solid #E00000;
+    border-radius: 4px;
+    position: relative;
+    top: -5em;
+}
+
+// Bouton fermer la modale
+.closeModale {
+    position: absolute;
+    right: -50px;
+    top: -40vh;
+    z-index: 200;
+    cursor: pointer;
+    color: #313144;
+    background-color: #E5E5E5;
+    border: 2px solid #313144;
+    padding: 6px 10px;
+    border-radius: 4px;
+    transition: transform 0.3s ease-in-out;
+    &:hover {   
+        color: #E00000;
+        background-color: #FFD6D6;
+        border: 2px solid #E00000;
+        transform: scale(1.2);
+    }
+}
+
+
+/*---------------------------------- Styles single.php ----------------------------------*/
+.single_post_article {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    //top: -5em;
+    width: 75vw;
+    height: 80vh;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    border-bottom: 3px solid black;
+    //border: 3px inset yellow;//////
+}
+
+// On enlève auteur et date
+.entry-meta {
+    display: none;
+}
+
+.infos_du_post {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    gap: 2em;
+    width: 25vw;
+    padding-bottom: 3em;
+    text-transform: uppercase;
+    //border: 3px solid orange;//////
+}
+
+.image_du_post {
+    position: absolute;
+    top: 0px;
+    right: -6em;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 80vh;
+    padding: 0;
+    //border: 3px solid green;//////
+    img.img_portrait{
+        display: block;
+        position: relative;
+        right: 0px;
+        bottom: 0px;
+        //width: 100%;
+        height: 100%;
+        border-bottom: 3px solid white;
+        max-height: none;
+        object-fit: contain;
+        //border: 3px solid violet;//////
+    }
+    img.img_paysage{
+        display: block;
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+        width: 130%;
+        max-width: none;
+        border-left: 1em solid white;
+        object-fit: contain;
+        //border: 3px solid violet;//////
+    }
+}
+
+/*-------- Menu navigation bas de page ---------*/
+// On efface la navigation Astra
+.post-navigation {
+    display: none;
+}
+
+.contact_ref_img {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width:31vw;
+    //border: 3px solid blue;//////
+}
+
+.contact_et_nav {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    width: 80vw;
+    left:13vw;
+    //border: 3px solid green;//////
+}
+
+.divNavSinglePost {
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    width: 80vw;
+    left:13vw;
+}
+
+.prev_next_post-nav {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1vh;
+}
+
+.postNavThumbnail {
+    display:block;
+    width: 5vw;
+}
+
+.PostNavFleches {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    img {
+        padding-left:1vw;
+        padding-right: 1vw;
+    }
+}
+
+/*------------------ 2 images liées ----------------------------*/
+.photosLiees {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 80vw;
+    left:13vw;
+    h3 {
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+    //border: 3px solid blue;//////
+}
+
+.imgX2 {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    //border: 3px solid orange;//////
+}
+
+.randomImgLink {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 50vw;
+    height: 75vh;
+    overflow: hidden;
+    //border: 3px solid green;//////
+    img {
+        position: absolute; /* Permet de déplacer l'image à l'intérieur du conteneur */
+        top: 50%; /* Centrer verticalement */
+        left: 50%; /* Centrer horizontalement */
+        transform: translate(-50%, -50%); /* Ajuste la position pour un centrage parfait */
+        width: 100%; /* Peut ajuster cette valeur selon la taille que tu veux pour l'image */
+        height: 100%; /* Peut aussi ajuster selon la taille */
+        object-fit: cover;
+        padding: 0.5em;
+    }
+}
+
+/*------------------------------------------------ Photos tous les posts page d'accueil ------------------------------------------------*/
+.photosAllPosts {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80vw;
+    left: 10vw;
+    //border: 3px solid green;
+}
+
+.imgAllPosts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    justify-content: center;
+    //border: 3px solid blue;
+}
+
+.allPostsImgLink {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 39vw;
+    height: 60vh;
+    overflow: hidden;
+    //border: 3px solid green;//////
+    img {
+        position: absolute; /* Permet de déplacer l'image à l'intérieur du conteneur */
+        top: 50%; /* Centrer verticalement */
+        left: 50%; /* Centrer horizontalement */
+        transform: translate(-50%, -50%); /* Ajuste la position pour un centrage parfait */
+        width: 100%; /* Peut ajuster cette valeur selon la taille que tu veux pour l'image */
+        height: 100%; /* Peut aussi ajuster selon la taille */
+        object-fit: cover;
+        //padding: 0.5em;
+    }
+}
