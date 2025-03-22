@@ -162,21 +162,20 @@
 
 .form-modale {
   display: block;
-  position: relative;
-  top: 5vh;
+  position: absolute;
+  top: 45vh;
   width: 40vw;
   height: 60vh;
 }
 
 .div-form-contact {
-  display: block;
-  /*display: flex !important;
+  display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;*/
-  position: fixed;
-  top: 10vh;
-  width: 40vw;
+  align-items: center;
+  display: block;
+  position: absolute;
+  top: -40vh;
   text-transform: uppercase;
   background-color: white;
   border: 5px solid black;
@@ -228,9 +227,9 @@
 }
 
 .closeModale {
-  position: fixed;
-  right: 28vw;
-  top: 10vh;
+  position: absolute;
+  right: -50px;
+  top: -40vh;
   z-index: 200;
   cursor: pointer;
   color: #313144;
@@ -322,7 +321,11 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 31vw;
+  width: 42.5vw;
+  
+  button {
+    width: 20vw;
+  }
 }
 
 .contact_et_nav {
@@ -407,113 +410,356 @@
   padding: 0.5em;
 }
 
-/*------------------------------------------------- Listes déroulantes ---------------------------------*/
+/*------------------------------------------------------------------Page d'accueil --------------------------------------------------------*/
+/*---------------------------- Listes déroulantes --------------------------*/
 .div_container_filtres {
   position: relative;
-  display: flex;
-  flex-direction: row;
   justify-content: center;
-  align-items: center;
-  width: 100vw;
-  margin: 0;
-  padding: 0;
-  left: -1vw;
 }
 
 .div_filtres {
   position: relative;
   display: flex;
   flex-direction: row;
-  width: 85vw;
-  margin-top: 1em;;
-}
+  width: 78.5vw;
+  left: 10.6vw;
+  gap: 1vw;
 
-.div_filtre_gauche {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  gap: 2vw;
-  width: 45vw;
-}
+  .div_filtre_gauche {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 39.6vw;
+  }
 
-.div_filtre_droite {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  width: 45vw;
-}
-
-.select_liste_deroulante {
-  display: inline-block;
-  width: 20vw !important;
-}
-
-select .option_liste_deroulante {
-
-}
-
-/*------------------------------ Bloc 8 images ----------------------------*/
-.div_container_photos_accueil {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 85vw;
-  position: relative;
-  left: 6.5vw;
-  margin-top: 1em;
-  gap: 1.5vw;
-
-  a {
-    display: block;
-    width:41.5vw;
-    height: 40vw;
-    overflow: hidden;
-    
-    img {
-      object-fit: cover;
-      object-position: center;
-      width: 100%;
-      height: 100%;
-    }
+  .div_filtre_droite {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 39vw;
+  }
+  
+  select {
+    display: inline-block;
+    width: 18vw;
+    text-transform: uppercase;
+    border-radius: 5px;
+    margin-top: 6vh;
+    margin-bottom: 4vh;
   }
 }
 
-/*-------------------------- Photos tous les posts page d'accueil ---------------------------*/
-.photosAllPosts {
+/*------------------ Photos tous les posts page d'accueil ------------------*/
+.div_container_photos_accueil {
   position: relative;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   width: 80vw;
   left: 10vw;
-}
-
-.imgAllPosts {
-  display: flex;
   flex-wrap: wrap;
   gap: 0.5em;
-  justify-content: center;
+
+  a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 39vw;
+    height: 60vh;
+    overflow: hidden;
+
+    img {
+      position: absolute; /*/ Permet de déplacer l'image à l'intérieur du conteneur */
+      top: 50%; /*/ Centrer verticalement*/
+      left: 50%; /*/ Centrer horizontalement*/
+      transform: translate(-50%, -50%); /*/ Ajuste la position pour un centrage parfait*/
+      width: 100%; /*/ Peut ajuster cette valeur selon la taille que tu veux pour l'image*/
+      height: 100%; /*/ Peut aussi ajuster selon la taille*/
+      -o-object-fit: cover;
+      object-fit: cover;
+    }
+  }
+} /* Fin de div_container_photos_accueil */
+
+
+/*--------------------------------------------------------------- Mobiles ---------------------------------------------------*/
+@media (max-width: 480px) {
+.site-main {
+  display: flex;
+  flex-direction: column;
 }
 
-.allPostsImgLink {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  width: 39vw;
-  height: 60vh;
-  overflow: hidden;
-}
-.allPostsImgLink img {
-  position: absolute; /* Permet de déplacer l'image à l'intérieur du conteneur */
-  top: 50%; /* Centrer verticalement */
-  left: 50%; /* Centrer horizontalement */
-  transform: translate(-50%, -50%); /* Ajuste la position pour un centrage parfait */
-  width: 100%; /* Peut ajuster cette valeur selon la taille que tu veux pour l'image */
-  height: 100%; /* Peut aussi ajuster selon la taille */
-  -o-object-fit: cover;
-  object-fit: cover;
-}
+  /* ---------------------- Header --------------------------*/
+  div.ast-post-format- {
+    display: none;
+  }
+
+  /*------------------------------------------ Page d'accueil -------------------------*/
+  /*------------------ Listes déroulantes ---------------------*/
+  .div_filtres {
+    flex-direction: column;
+
+    .div_filtre_gauche {
+      flex-direction: column;
+      width:100%;
+      gap: 0;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      height: 10vh;
+
+      select {
+        position: relative;
+        top: 0vh;
+        width: 100%;
+        margin: 0;
+        margin-bottom: 5px;
+      }
+    }
+
+    .div_filtre_droite {
+      flex-direction: column;
+      width:100%;
+      gap: 0;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      height: 5vh;
+
+      select {
+        position: relative;
+        top: 0vh;
+        width: 100%;
+        margin: 0;
+        top: -5px;
+      }
+    }
+
+    select {
+      position: relative;
+      top: 0vh;
+      width: 100%;
+    }
+  }
+
+  /*----------------------- 8 Photos ----------------------------*/
+  .div_container_photos_accueil {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80vw;
+    left: 10vw;
+    flex-wrap: wrap;
+    gap: 0.5em;
+  
+    a {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      width: 80vw;
+      height: 35vh;
+      overflow: hidden;
+  
+      img {
+        position: absolute; /*/ Permet de déplacer l'image à l'intérieur du conteneur */
+        top: 50%; /*/ Centrer verticalement*/
+        left: 50%; /*/ Centrer horizontalement*/
+        transform: translate(-50%, -50%); /*/ Ajuste la position pour un centrage parfait*/
+        width: 100%; /*/ Peut ajuster cette valeur selon la taille que tu veux pour l'image*/
+        height: 100%; /*/ Peut aussi ajuster selon la taille*/
+        -o-object-fit: cover;
+        object-fit: cover;
+      }
+    }
+  } /* Fin de div_container_photos_accueil */
+
+  /*------------------------------------------ Page single -------------------------*/
+  .single_post_article {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 75vw;
+    height: 80vh;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    border-bottom: 0px;
+  }
+  
+  .entry-meta {
+    display: none;
+  }
+  
+  .infos_du_post {
+    position: relative;
+    bottom: 0px;
+    left: 0px;
+    top: 73vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    gap: 2em;
+    width: 80vw;
+    padding-bottom: 3em;
+    text-transform: uppercase;
+  }
+  
+  hr {
+    display: none;
+  }
+
+  .image_du_post {
+    position: relative;
+    top: -9vh;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    padding: 0;
+  }
+
+  .image_du_post img.img_portrait {
+    display: block;
+    position: relative;
+    right: 0px;
+    bottom: 0px;
+    top: -28vh;
+    height: 100%;
+    border-bottom: 3px solid white;
+    max-height: none;
+    -o-object-fit: contain;
+    object-fit: contain;
+  }
+  .image_du_post img.img_paysage {
+    display: block;
+    position: relative;
+    right: 0px;
+    top: -32vh;
+    bottom: 0px;
+    left: -7vw;
+    width: 90vw;
+    max-height: 30vh;
+    max-width: none;
+    border-left: 1em solid white;
+    -o-object-fit: contain;
+    object-fit: contain;
+  }
+
+  .contact_ref_img {
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    top: 33vh;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    
+    button {
+      width: 80vw;
+      margin-top: 20px;
+    }
+  }
+  
+  .contact_et_nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    width: 100vw;
+    left: 0vw;
+  }
+  
+  .divNavSinglePost {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    width: 80vw;
+    left: 13vw;
+  }
+  
+  .prev_next_post-nav {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1vh;
+  }
+  
+  .postNavThumbnail {
+    display: block;
+    width: 5vw;
+  }
+  
+  .PostNavFleches {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .PostNavFleches img {
+    padding-left: 1vw;
+    padding-right: 1vw;
+  }
+  
+  /*------------------ 2 images liées ----------------------------*/
+  .photosLiees {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+    left: 8vw;
+    top: 33vh;
+  }
+  .photosLiees h3 {
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+  
+  .imgX2 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .randomImgLink {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 80vw;
+    height: 35vh;
+    overflow: hidden;
+  }
+  .randomImgLink img {
+    position: absolute; /* Permet de déplacer l'image à l'intérieur du conteneur */
+    top: 50%; /* Centrer verticalement */
+    left: 50%; /* Centrer horizontalement */
+    transform: translate(-50%, -50%); /* Ajuste la position pour un centrage parfait */
+    width: 100%; /* Peut ajuster cette valeur selon la taille que tu veux pour l'image */
+    height: 100%; /* Peut aussi ajuster selon la taille */
+    -o-object-fit: cover;
+    object-fit: cover;
+    padding: 0.5em;
+  }
+
+  /*-------------------------------------------- Footer -----------------------------------------*/
+  .footer-nav-wrap {
+    position:relative;
+    width: 100vw;
+    height: 10vh;
+    align-items: center;
+    bottom: -33vh;
+  }
+
+}/* Fin de @media (max-width: 480px) */

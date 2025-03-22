@@ -1,5 +1,5 @@
 jQuery(document).ready(function($) {
-    console.log('inside ajax(child.js : document.ready !)');//////
+    //console.log('inside ajax(child.js : document.ready !)');//////
 
     /*------------------------------------ On crée les écouteur d'évènment change des listes déroulantes ----------------------------------*/
     $('#filtre_categorie, #filtre_format, #filtre_type_annee').on('change', function() {
@@ -65,19 +65,19 @@ jQuery(document).ready(function($) {
         var htmlDivPhotosContent = "";
         
         // On ouvre le div des photos
-        htmlDivPhotosContent = "<div class='div_container_photos_accueil' id='div_container_photos_accueil' >";
+        //htmlDivPhotosContent = "<div class='div_container_photos_accueil' id='div_container_photos_accueil' >";
 
         // On boucle pour mettre les photos
         if (photos && photos.length > 0) {
             $.each(photos, function(i, photo) {
             console.table(photo);//////
             
-            htmlDivPhotosContent = htmlDivPhotosContent + "<a href='"+photo['url']+"' title='"+photo['titre']+"' >";
+            htmlDivPhotosContent = htmlDivPhotosContent + "<a href='"+photo['url']+"' title='"+photo['titre']+"' target='_blank' >";
             htmlDivPhotosContent = htmlDivPhotosContent + "<img src='"+photo['image']+"' alt='"+photo['titre']+"' title='"+photo['titre']+"' >";
             htmlDivPhotosContent = htmlDivPhotosContent + "</a>";
             });// Fin de $.each(photos, function(i, photo)
 
-        htmlDivPhotosContent = htmlDivPhotosContent + "</div>";
+        //htmlDivPhotosContent = htmlDivPhotosContent + "</div>";
         // On injecte le HTML dans le div
         divContainerPhotosAccueil.html(htmlDivPhotosContent);
 

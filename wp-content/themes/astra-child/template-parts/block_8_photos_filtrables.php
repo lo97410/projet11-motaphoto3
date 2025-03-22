@@ -340,7 +340,7 @@ if ($query->have_posts()) {
                         [image] => http://127.0.0.1/ocdevwp-projet11/motaphoto3/wp-content/uploads/2025/02/nathalie-15-pso-684x1024.jpg.webp
                     )*/
 
-                echo "\n <a href='".$array_voir_plus['url']."' title='".$array_voir_plus['titre']."' >";
+                echo "\n <a href='".$array_voir_plus['url']."' title='".$array_voir_plus['titre']."' target='_blank' >";
                     echo "\n <img src='".$array_voir_plus['image']."' alt='".$array_voir_plus['titre']."' title='".$array_voir_plus['titre']."' >";
                 echo "\n </a>";
             }// Fin de foreach($array_voir_plus[1] as $key_voir_plus => $array_voir_plus)
