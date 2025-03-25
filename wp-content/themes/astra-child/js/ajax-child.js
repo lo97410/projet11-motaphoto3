@@ -35,25 +35,30 @@ jQuery(document).ready(function($) {
                 },
                 success: function(response) {
                     console.log("Réponse AJAX complète :", response);////// On met la réponse en console
+
                     if (Array.isArray(response) && response.length > 0) {
                         afficherPhotos(response); // Appel de la fonction de construction du HTML à injecter
+
                         console.log("AJAX envoyé");//////
                     } else {
                         divContainerPhotosAccueil = $('#div_container_photos_accueil');
                         divContainerPhotosAccueil.html('<p>Aucune image trouvée.</p>');
+
                         console.log("AJAX pas de photo");//////
                     }
                 },
                 error: function(xhr, status, error) {
                     // Si une erreur survient pendant l'exécution de la requête AJAX
                     console.error('Erreur AJAX : ', status, error);
+
                     divContainerPhotosAccueil = $('#div_container_photos_accueil');
                     divContainerPhotosAccueil.html('<p>Une erreur est survenue lors de la récupération des données.</p>');
+
                     console.log("AJAX erreur de transmission de données", xhr.status, error);//////
                 }
             });// Fin de $.ajax(
         }// Fin de if (categorie && format && type && annee)
-    });// Fin de $('#filtre_categorie').on('change', function()
+    });// Fin de $('#filtre_categorie, #filtre_format, #filtre_type_annee').on('change', function()
 
     /*------------------------------------------------ Fonction de construction du html à injecter -----------------------------------------*/
     // Fonction pour afficher les images retournées par AJAX
@@ -80,13 +85,90 @@ jQuery(document).ready(function($) {
         //htmlDivPhotosContent = htmlDivPhotosContent + "</div>";
         // On injecte le HTML dans le div
         divContainerPhotosAccueil.html(htmlDivPhotosContent);
+        } 
+        else {
+            // Si aucune image n'est trouvée, afficher un message
+            divContainerPhotosAccueil.html('<p>Aucune photo trouvée.</p>');
+            //console.log("Aucune photo trouvée");//////
+            }// Fin de if (photos && photos.length > 0) + else
+    }// Fin de function afficherPhotos(photos)
 
+
+    /*------------------------------------------------------------ Action bouton Voir plus ------------------------------------------------------------------------------*/
+    // Attachement de l'événement 'click' sur le bouton
+    $('#buttonVoirPlus').on('click', function() {
+        voirPlus();  // Appel de la fonction
+    });
+
+    var currentPage = 1;
+    // Onclick bouton Voir plus
+    function voirPlus() {
+        //console.log("Requête AJAX Voir plus en cours...");//////
+        currentPage++;
+        // Si la dernière page est atteinte on cache le bouton Voir Plus
+        if(currentPage == nb_pages) {
+            $('#btnVoirPlus').hide();
+        }
+
+        $.ajax({
+            type: 'POST',
+            url: '/ocdevwp-projet11/motaphoto3/wp-admin/admin-ajax.php', // url WordPress pour traiter les requêtes AJAX
+            data: {
+                action: 'voir_plus_photos', // identifiant de l'action pour les hooks
+                paged: currentPage,
+            },
+            success: function(response) {
+                console.log("Réponse AJAX complète :", response);////// On met la réponse en console
+
+                if (Array.isArray(response) && response.length > 0) {
+                    afficherVoirPlusPhotos(response); // Appel de la fonction de construction du HTML à injecter
+
+                    console.log("AJAX envoyé");//////
+                } else {
+                    divContainerPhotosAccueil = $('#div_container_photos_accueil');
+                    divContainerPhotosAccueil.html('<p>Aucune image trouvée.</p>');
+
+                    console.log("AJAX pas de photo");//////
+                }
+            },
+            error: function(xhr, status, error) {
+                // Si une erreur survient pendant l'exécution de la requête AJAX
+                console.error('Erreur AJAX : ', status, error);
+                divContainerPhotosAccueil = $('#div_container_photos_accueil');
+                divContainerPhotosAccueil.html('<p>Une erreur est survenue lors de la récupération des données.</p>');
+                console.log("AJAX erreur de transmission de données", xhr.status, error);//////
+            }
+        });// Fin de $.ajax(
+
+        //-=====================================================> $('#buttonVoirPlus').hide(); !!!!!!!!!!!!!!!!!!!!!!4+
+    }// Fin de function voirPlus()
+
+
+    //------------------------------ Fonction de cosntruction du HTML -------------------------//
+    function afficherVoirPlusPhotos(photos) {
+        var divContainerPhotosAccueil = $('#div_container_photos_accueil');
+        //console.log("Inside afficherVoirPlusPhotos(plusDePhotos)");//////
+
+        var htmlDivPhotosContentAccueil = divContainerPhotosAccueil.html();
+        
+        // On boucle pour mettre les photos
+        if (photos && photos.length > 0) {
+            $.each(photos, function(i, photo) {
+            console.table(photo);//////
+            
+            htmlDivPhotosContentAccueil = htmlDivPhotosContentAccueil + "<a href='"+photo['url']+"' title='"+photo['titre']+"' target='_blank' >";
+            htmlDivPhotosContentAccueil = htmlDivPhotosContentAccueil + "<img src='"+photo['image']+"' alt='"+photo['titre']+"' title='"+photo['titre']+"' >";
+            htmlDivPhotosContentAccueil = htmlDivPhotosContentAccueil + "</a>";
+            });// Fin de $.each(photos, function(i, photo)
+
+        // On ajoute le HTML dans le div
+        divContainerPhotosAccueil.html(htmlDivPhotosContentAccueil);
 
         } else {
             // Si aucune image n'est trouvée, afficher un message
             divContainerPhotosAccueil.html('<p>Aucune photo trouvée.</p>');
             //console.log("Aucune photo trouvée");//////
         }// Fin de if (photos && photos.length > 0) + else
-    }
+    }// Fin de function afficherVoirPlusPhotos(plusDePhotos)
 
 });// Fin de jQuery(document).ready(function($)

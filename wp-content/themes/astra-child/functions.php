@@ -109,6 +109,8 @@ add_shortcode('block_8_photos_filtrables', 'shortCode_block_8_photos_filtrables'
 
 
 /*----------------------------------------------------------------- AJAX page d'accueil ------------------------------------------------*/
+
+/* ------------------------------------- Fonction pour afficher selon les filtres --------------------------------*/
 function get_photos_ajax() {
     error_log(print_r($_POST, true));////// Erreur enregistrée dans le log
 
@@ -166,7 +168,81 @@ function get_photos_ajax() {
     }
 
     error_log("Arguments WP_Query : " . print_r($args, true));////// Vérifications dans les logs
+
     $query = new WP_Query($args);
+    
+    error_log("Nombre de posts trouvés : " . $query->found_posts);////// Nb de posts trouvés
+    error_log("Arguments AJAX : " . print_r($args, true));////// Vérifications dans les logs
+
+    $photos = array();
+
+    if ($query->have_posts()) {
+        while ($query->have_posts()) {
+            $query->the_post();
+
+            $id = get_the_ID();
+            $image_url = get_the_post_thumbnail_url($id, 'large');
+            if ($image_url) {
+                $photos[] = array(
+                    'id'    => get_the_ID(),
+                    'titre' => get_the_title(),
+                    'url'   => get_permalink($id),
+                    'image' => $image_url,
+                );
+            }
+        }
+        wp_reset_postdata();
+    }
+
+    wp_send_json($photos);
+    wp_die();
+
+    error_log("Réponse AJAX : " . print_r($photos, true));////// Vérifications dans les logs
+}// Fin de function get_photos_ajax()
+
+add_action('wp_ajax_get_photos', 'get_photos_ajax');
+add_action('wp_ajax_nopriv_get_photos', 'get_photos_ajax');
+
+/*------------------------------------------------ FIN DE  Fonction pour afficher selon les filtres --------------------------------------------------------*/
+
+/* ------------------------------------------------ Fonction pour tout afficher avec pagination -------------------------------------------------------------*/
+function voir_plus_photos_ajax() {
+    error_log(print_r($_POST, true));////// Erreur enregistrée dans le log
+
+    // Gestion de la pagination
+    /*$curent_page = get_query_var('paged');
+    error_log(print_r($curent_page, true));////// Erreur enregistrée dans le log
+
+    if (!$curent_page || $curent_page < 1) {
+        $next_page = 1; // Si la variable 'paged' est vide ou inférieure à 1, on force la valeur à 1
+    }
+    else {
+        $next_page = $curent_page + 1;
+    }
+    error_log('Page suivante dans function.php : ' . $next_page);//////
+
+    //echo "*** paged aftre check : ".$curent_page." *** ";////// BUG JSON !!!*/
+
+    if(isset($_POST['paged'])) {
+        $next_page = $_POST['paged'];
+    }
+    else {
+        $next_page = 1;
+    }
+
+    // Arguments de la requête WP_Query pour obtenir les 8 posts suivants
+    $args = array(
+        'post_type'      => 'photo',
+        'posts_per_page' => 8,
+        'paged'          => $next_page,
+        'post_status'    => 'publish',
+    );
+    //var_dump($args);////// BUG JSON !!!
+
+    error_log("Arguments WP_Query : " . print_r($args, true));////// Vérifications dans les logs
+
+    $query = new WP_Query($args);
+    
     error_log("Nombre de posts trouvés : " . $query->found_posts);////// Nb de posts trouvés
     error_log("Arguments AJAX : " . print_r($args, true));////// Vérifications dans les logs
 
@@ -195,8 +271,7 @@ function get_photos_ajax() {
 
     error_log("Réponse AJAX : " . print_r($photos, true));////// Vérifications dans les logs
 }
-
-add_action('wp_ajax_get_photos', 'get_photos_ajax');
-add_action('wp_ajax_nopriv_get_photos', 'get_photos_ajax');
+add_action('wp_ajax_voir_plus_photos', 'voir_plus_photos_ajax');
+add_action('wp_ajax_nopriv_voir_plus_photos', 'voir_plus_photos_ajax');
 
 

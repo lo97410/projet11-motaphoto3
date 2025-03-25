@@ -5,7 +5,20 @@ document.addEventListener("DOMContentLoaded", function() {
     document.querySelector(".itemMenuContact").addEventListener("click", function(event) {
         event.preventDefault(); // Empêche le lien # de fonctionner pour pouvoir appeler le js
         showModaleContact(refPhotoToSend);// Ajouter ref photo !!!!!! //////
+
+        if (event.target.closest(".itemMenuContact")) {
+            event.preventDefault(); // Empêche le lien # de fonctionner
+            showModaleContact(refPhotoToSend);
+        }
     });// Fin de document.querySelector(".itemMenuContact").addEventListener("click"
+
+// Menu burger
+document.addEventListener("click", function(event) {
+    if (event.target.closest(".itemMenuContact")) {
+        event.preventDefault(); // Empêche le lien # de fonctionner
+        showModaleContact(refPhotoToSend);
+    }
+});
 
     // Bouton de fermeture de modale
     document.querySelector(".closeModale").addEventListener("click", function(event) {

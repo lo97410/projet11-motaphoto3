@@ -1,17 +1,31 @@
 <?php
 session_start();
 
-// Arguments de la requête WP_Query pour obtenir tous les posts
+/*// Gestion de la pagination
+$curent_page = get_query_var('paged');
+//echo "*** paged : ".$curent_page." *** ";//////
+
+if (!$curent_page || $curent_page < 1) {
+    $curent_page = 1; // Si la variable 'paged' est vide ou inférieure à 1, on force la valeur à 1
+}
+//echo "*** paged aftre check : ".$curent_page." *** ";//////*/
+
+// Arguments de la requête WP_Query pour obtenir les 8 premiers posts 
 $args = array(
-    'post_type'      => 'photo',  // Type de contenu : ici 'post' pour les articles
-    'posts_per_page' => -1,      // -1 signifie qu'on veut récupérer tous les posts
+    'post_type'      => 'photo',
+    'posts_per_page' => 8,
+    'paged'          => 1,
+    'post_status'    => 'publish',
 );
+//var_dump($args);//////
+
 
 // Lancer la requête WP_Query
 $query = new WP_Query($args);
 
 // Si des posts existent, on les affiche
 if ($query->have_posts()) {
+
     $array_all_posts = array();
     $nb_all_posts = 0;
     
@@ -94,63 +108,14 @@ if ($query->have_posts()) {
             )
     ... )*/
 
-    $nb_posts = count($array_all_posts);
-    $nb_voir_plus = ceil($nb_posts / 8);
-    $numero_voir_plus = 1;
-    $count = 0;
-    $array_voir_plus = array();
-    if($array_all_posts) {
-        foreach($array_all_posts as $post) {
-            /*print_r($post);//////
-            [id] => 295
-            [titre] => Santé !
-            [url] => http://127.0.0.1/ocdevwp-projet11/motaphoto3/photo/sante/
-            [categorie] => Réception
-            [format] => Paysage
-            [type] => Argentique
-            [reference] => bf2385
-            [annee] => 2019
-            [image] => http://127.0.0.1/ocdevwp-projet11/motaphoto3/wp-content/uploads/2025/02/nathalie-0-pso-1024x682.jpg.webp*/
-
-            $count = $count + 1;
-            //echo " - count : ".$count." - numero_voir_plus : ".$numero_voir_plus."<br />";//////
-            if($count <= 8) {
-                $post_id =  $post['id'];
-                $array_voir_plus[$numero_voir_plus][$post_id] = array();
-                $array_voir_plus[$numero_voir_plus][$post_id] = $post;
-            }
-            else {
-                $count = 0;
-                $numero_voir_plus = $numero_voir_plus +1;
-            }
-        }// Fin de foreach($array_all_posts as $post)
-    }// Fin de if($array_all_posts)
-
-    /*print_r($array_voir_plus);//////
-    (
-        [1] => Array
-            (
-                [311] => Array
-                    (
-                        [id] => 311
-                        [titre] => Team mariée
-                        [url] => http://127.0.0.1/ocdevwp-projet11/motaphoto3/photo/team-mariee/
-                        [categorie] => Mariage
-                        [format] => Portrait
-                        [type] => Numérique
-                        [reference] => bf2400
-                        [annee] => 2022
-                        [image] => http://127.0.0.1/ocdevwp-projet11/motaphoto3/wp-content/uploads/2025/02/nathalie-15-pso-684x1024.jpg.webp
-                    )
-            )
-    )*/
-
-    if($array_voir_plus) {
-        $_SESSION['array_voir_plus'] = $array_voir_plus;
-    }
-
     /*---------------------- On crée les tableaux pour afficher les listes déroulantes de filtrage des posts ----------------------*/
     if($array_all_posts) {
+        // On compte le nombre total de posts pour déterminer le nombre de pages
+        $post_type = 'photo';
+        $count_posts = wp_count_posts($post_type);
+        $total_posts = $count_posts->publish;
+        $nb_pages = ceil($total_posts / 8);
+
         $filtre_categorie = array();
         $filtre_format = array();
         $filtre_type = array();
@@ -276,6 +241,11 @@ if ($query->have_posts()) {
         print_r($filtre_annee);//////*/
 
         /*-------------------------------------------- On affiche les listes déroulantes de filtrage ------------------------------*/
+        echo "\n <script>";
+            echo "\n var nb_pages = ".$nb_pages;
+            echo "\n console.log(' nb_pages : '+nb_pages);"; //////
+        echo "\n </script>";
+
         echo "\n <section class='div_container_filtres' >";
         echo "\n <div class='div_filtres' >";
             echo "\n <div class='div_filtre_gauche' >";
@@ -291,7 +261,7 @@ if ($query->have_posts()) {
                 echo "\n <select name='filtre_format' id='filtre_format' class='select_liste_deroulante' >";
                     echo "\n <option value='' class='option_liste_deroulante' >Format</option>";
                     foreach($filtre_format as $curent_format) {
-                        echo "\n <option value='".$curent_format['slug']."' >".$curent_format['name']."</option>";
+                        echo "\n <option value='".$curent_format['slug']."' class='option_liste_deroulante' >".$curent_format['name']."</option>";
                         }
 
                 echo "\n </select>";
@@ -310,7 +280,7 @@ if ($query->have_posts()) {
 
                     echo "\n <optgroup label='Type' >";
                     foreach($filtre_type as $curent_type) {
-                        echo "\n <option value='".$curent_type."(type)' >".$curent_type."</option>";
+                        echo "\n <option value='".$curent_type."(type)' class='option_liste_deroulante' >".$curent_type."</option>";
                     }
                     echo "\n </optgroup>";
 
@@ -323,10 +293,9 @@ if ($query->have_posts()) {
 
         /*----------------------------------------------- On affiche les 8 photos d'origne ---------------------------------*/
         echo "\n <div class='div_container_photos_accueil' id='div_container_photos_accueil' >";
-            $nb_photos_affichees = 0;
 
-            foreach($array_voir_plus[1] as $key_voir_plus => $array_voir_plus) {
-                /*print_r($array_voir_plus);//////
+            foreach($array_all_posts as $key_post => $array_curent_post) {
+                /*print_r($array_curent_post);//////
                 Array
                     (
                         [id] => 311
@@ -340,10 +309,15 @@ if ($query->have_posts()) {
                         [image] => http://127.0.0.1/ocdevwp-projet11/motaphoto3/wp-content/uploads/2025/02/nathalie-15-pso-684x1024.jpg.webp
                     )*/
 
-                echo "\n <a href='".$array_voir_plus['url']."' title='".$array_voir_plus['titre']."' target='_blank' >";
-                    echo "\n <img src='".$array_voir_plus['image']."' alt='".$array_voir_plus['titre']."' title='".$array_voir_plus['titre']."' >";
+                echo "\n <a href='".$array_curent_post['url']."' title='".$array_curent_post['titre']."' target='_blank' >";
+                    echo "\n <img src='".$array_curent_post['image']."' alt='".$array_curent_post['titre']."' title='".$array_curent_post['titre']."' >";
                 echo "\n </a>";
-            }// Fin de foreach($array_voir_plus[1] as $key_voir_plus => $array_voir_plus)
+            }// Fin de foreach($array_curent_post[1] as $key_voir_plus => $array_curent_post)
+        echo "\n </div>";
+
+        // Bouton Voir plus
+        echo "\n <div class='btnVoirPlus' id='btnVoirPlus' >";
+            echo "\n <button type='button' class='buttonVoirPlus' id='buttonVoirPlus' >Charger plus</button>";
         echo "\n </div>";
 
         }// Fin de if($array_all_posts)

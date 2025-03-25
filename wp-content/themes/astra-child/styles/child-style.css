@@ -140,15 +140,19 @@
 .header-social-item {
   transition: transform 0.3s ease-in-out;
 }
+
 .header-social-item:hover {
   transform: scale(1.6);
 }
 
+/*.ast-mobile-menu-active .main-navigation ul {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}*/
 /*--------------------------------------------- Modale de contact -------------------------------------------*/
 #popup-modale {
   position: absolute;
   left: 0;
-  top: 0;
   display: none;
   flex-direction: column !important;
   justify-content: center;
@@ -163,7 +167,7 @@
 .form-modale {
   display: block;
   position: absolute;
-  top: 45vh;
+  top: 10vh;
   width: 40vw;
   height: 60vh;
 }
@@ -175,33 +179,37 @@
   align-items: center;
   display: block;
   position: absolute;
-  top: -40vh;
   text-transform: uppercase;
   background-color: white;
   border: 5px solid black;
 }
+
 .div-form-contact img {
   display: block;
   width: 100vw;
 }
+
 .div-form-contact label {
   display: flex;
   flex-direction: column;
   margin-left: 20%;
   margin-right: 20%;
 }
+
 .div-form-contact input {
   display: flex;
   flex-direction: column;
   border-radius: 4px;
 }
+
 .div-form-contact textarea {
   display: flex;
   flex-direction: column;
   height: 5em;
   border-radius: 4px;
 }
-.div-form-contact p input[type=submit] {
+
+.div-form-contact p input[type="submit"] {
   display: flex;
   margin-left: 20%;
   margin-right: 20%;
@@ -212,7 +220,8 @@
   border-radius: 4px;
   transition: transform 0.3s ease-in-out;
 }
-.div-form-contact p input[type=submit]:hover {
+
+.div-form-contact p input[type="submit"]:hover {
   color: #E00000;
   background-color: #FFD6D6;
   transform: scale(1.05);
@@ -228,8 +237,7 @@
 
 .closeModale {
   position: absolute;
-  right: -50px;
-  top: -40vh;
+  right: -2vw;
   z-index: 200;
   cursor: pointer;
   color: #313144;
@@ -239,6 +247,7 @@
   border-radius: 4px;
   transition: transform 0.3s ease-in-out;
 }
+
 .closeModale:hover {
   color: #E00000;
   background-color: #FFD6D6;
@@ -288,6 +297,7 @@
   height: 80vh;
   padding: 0;
 }
+
 .image_du_post img.img_portrait {
   display: block;
   position: relative;
@@ -296,9 +306,9 @@
   height: 100%;
   border-bottom: 3px solid white;
   max-height: none;
-  -o-object-fit: contain;
   object-fit: contain;
 }
+
 .image_du_post img.img_paysage {
   display: block;
   position: absolute;
@@ -307,7 +317,6 @@
   width: 130%;
   max-width: none;
   border-left: 1em solid white;
-  -o-object-fit: contain;
   object-fit: contain;
 }
 
@@ -321,11 +330,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 42.5vw;
-  
-  button {
-    width: 20vw;
-  }
+  width: 31vw;
 }
 
 .contact_et_nav {
@@ -364,6 +369,7 @@
   flex-direction: row;
   justify-content: space-between;
 }
+
 .PostNavFleches img {
   padding-left: 1vw;
   padding-right: 1vw;
@@ -378,6 +384,7 @@
   width: 80vw;
   left: 13vw;
 }
+
 .photosLiees h3 {
   margin-top: 2em;
   margin-bottom: 2em;
@@ -398,57 +405,22 @@
   height: 75vh;
   overflow: hidden;
 }
+
 .randomImgLink img {
-  position: absolute; /* Permet de déplacer l'image à l'intérieur du conteneur */
-  top: 50%; /* Centrer verticalement */
-  left: 50%; /* Centrer horizontalement */
-  transform: translate(-50%, -50%); /* Ajuste la position pour un centrage parfait */
-  width: 100%; /* Peut ajuster cette valeur selon la taille que tu veux pour l'image */
-  height: 100%; /* Peut aussi ajuster selon la taille */
-  -o-object-fit: cover;
+  position: absolute;
+  /* Permet de déplacer l'image à l'intérieur du conteneur */
+  top: 50%;
+  /* Centrer verticalement */
+  left: 50%;
+  /* Centrer horizontalement */
+  transform: translate(-50%, -50%);
+  /* Ajuste la position pour un centrage parfait */
+  width: 100%;
+  /* Peut ajuster cette valeur selon la taille que tu veux pour l'image */
+  height: 100%;
+  /* Peut aussi ajuster selon la taille */
   object-fit: cover;
   padding: 0.5em;
-}
-
-/*------------------------------------------------------------------Page d'accueil --------------------------------------------------------*/
-/*---------------------------- Listes déroulantes --------------------------*/
-.div_container_filtres {
-  position: relative;
-  justify-content: center;
-}
-
-.div_filtres {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  width: 78.5vw;
-  left: 10.6vw;
-  gap: 1vw;
-
-  .div_filtre_gauche {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 39.6vw;
-  }
-
-  .div_filtre_droite {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    width: 39vw;
-  }
-  
-  select {
-    display: inline-block;
-    width: 18vw;
-    text-transform: uppercase;
-    border-radius: 5px;
-    margin-top: 6vh;
-    margin-bottom: 4vh;
-  }
 }
 
 /*------------------ Photos tous les posts page d'accueil ------------------*/
@@ -461,89 +433,173 @@
   left: 10vw;
   flex-wrap: wrap;
   gap: 0.5em;
+}
 
-  a {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    width: 39vw;
-    height: 60vh;
-    overflow: hidden;
+.div_container_photos_accueil a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 39vw;
+  height: 60vh;
+  overflow: hidden;
+}
 
-    img {
-      position: absolute; /*/ Permet de déplacer l'image à l'intérieur du conteneur */
-      top: 50%; /*/ Centrer verticalement*/
-      left: 50%; /*/ Centrer horizontalement*/
-      transform: translate(-50%, -50%); /*/ Ajuste la position pour un centrage parfait*/
-      width: 100%; /*/ Peut ajuster cette valeur selon la taille que tu veux pour l'image*/
-      height: 100%; /*/ Peut aussi ajuster selon la taille*/
-      -o-object-fit: cover;
-      object-fit: cover;
-    }
-  }
-} /* Fin de div_container_photos_accueil */
+.div_container_photos_accueil a img {
+  position: absolute;
+  /*/ Permet de déplacer l'image à l'intérieur du conteneur */
+  top: 50%;
+  /*/ Centrer verticalement*/
+  left: 50%;
+  /*/ Centrer horizontalement*/
+  transform: translate(-50%, -50%);
+  /*/ Ajuste la position pour un centrage parfait*/
+  width: 100%;
+  /*/ Peut ajuster cette valeur selon la taille que tu veux pour l'image*/
+  height: 100%;
+  /*/ Peut aussi ajuster selon la taille*/
+  -o-object-fit: cover;
+  object-fit: cover;
+}
 
+/* Fin de div_container_photos_accueil */
+/*------------------ Listes déroulantes ---------------------*/
+.div_filtres {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 79vw;
+  position: relative;
+  left: 10.5vw;
+  margin-bottom: 3vh;
+}
+
+.div_filtres .div_filtre_gauche {
+  display: flex;
+  flex-direction: row;
+  width: 39vw;
+  gap: 0;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  height: 5vh;
+}
+
+.div_filtres .div_filtre_gauche select {
+  position: relative;
+  top: 0vh;
+  width: 15vw;
+  margin: 0;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.div_filtres option:hover {
+  background-color: #FFD6D6;
+}
+
+.div_filtres .div_filtre_droite {
+  display: flex;
+  flex-direction: row;
+  width: 39vw;
+  gap: 0;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin: 0;
+  margin-left: 1vw;
+  height: 5vh;
+}
+
+.div_filtres .div_filtre_droite select {
+  position: relative;
+  top: 0vh;
+  width: 15vw;
+  margin: 0;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.btnVoirPlus {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100vw;
+  margin-top: 4vh;
+  margin-bottom: 4vh;
+}
+
+.btnVoirPlus button {
+  display: block;
+  width: 30vw;
+}
 
 /*--------------------------------------------------------------- Mobiles ---------------------------------------------------*/
 @media (max-width: 480px) {
-.site-main {
-  display: flex;
-  flex-direction: column;
-}
-
+  .site-main {
+    display: flex;
+    flex-direction: column;
+  }
+  .form-modale {
+    display: block;
+    position: absolute;
+    top: 10vh;
+    width: 80vw;
+    height: 60vh;
+  }
+  .closeModale {
+    position: absolute;
+    right: -8vw;
+    z-index: 200;
+  }
   /* ---------------------- Header --------------------------*/
   div.ast-post-format- {
     display: none;
   }
-
+  .ast-mobile-header-wrap .main-navigation ul li a {
+    color: #E00000 !important;
+    /* Remplace par la couleur souhaitée */
+  }
   /*------------------------------------------ Page d'accueil -------------------------*/
   /*------------------ Listes déroulantes ---------------------*/
   .div_filtres {
     flex-direction: column;
-
-    .div_filtre_gauche {
-      flex-direction: column;
-      width:100%;
-      gap: 0;
-      justify-content: center;
-      align-items: center;
-      margin: 0;
-      height: 10vh;
-
-      select {
-        position: relative;
-        top: 0vh;
-        width: 100%;
-        margin: 0;
-        margin-bottom: 5px;
-      }
-    }
-
-    .div_filtre_droite {
-      flex-direction: column;
-      width:100%;
-      gap: 0;
-      justify-content: center;
-      align-items: center;
-      margin: 0;
-      height: 5vh;
-
-      select {
-        position: relative;
-        top: 0vh;
-        width: 100%;
-        margin: 0;
-        top: -5px;
-      }
-    }
-
-    select {
-      position: relative;
-      top: 0vh;
-      width: 100%;
-    }
   }
-
+  .div_filtres .div_filtre_gauche {
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 10vh;
+  }
+  .div_filtres .div_filtre_gauche select {
+    position: relative;
+    top: 0vh;
+    width: 100%;
+    margin: 0;
+    margin-bottom: 5px;
+  }
+  .div_filtres .div_filtre_droite {
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 5vh;
+  }
+  .div_filtres .div_filtre_droite select {
+    position: relative;
+    top: 0vh;
+    width: 100%;
+    margin: 0;
+    top: -5px;
+  }
+  .div_filtres select {
+    position: relative;
+    top: 0vh;
+    width: 100%;
+  }
   /*----------------------- 8 Photos ----------------------------*/
   .div_container_photos_accueil {
     position: relative;
@@ -554,28 +610,44 @@
     left: 10vw;
     flex-wrap: wrap;
     gap: 0.5em;
-  
-    a {
-      position: relative;
-      display: flex;
-      justify-content: center;
-      width: 80vw;
-      height: 35vh;
-      overflow: hidden;
-  
-      img {
-        position: absolute; /*/ Permet de déplacer l'image à l'intérieur du conteneur */
-        top: 50%; /*/ Centrer verticalement*/
-        left: 50%; /*/ Centrer horizontalement*/
-        transform: translate(-50%, -50%); /*/ Ajuste la position pour un centrage parfait*/
-        width: 100%; /*/ Peut ajuster cette valeur selon la taille que tu veux pour l'image*/
-        height: 100%; /*/ Peut aussi ajuster selon la taille*/
-        -o-object-fit: cover;
-        object-fit: cover;
-      }
-    }
-  } /* Fin de div_container_photos_accueil */
-
+  }
+  .div_container_photos_accueil a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 80vw;
+    height: 35vh;
+    overflow: hidden;
+  }
+  .div_container_photos_accueil a img {
+    position: absolute;
+    /*/ Permet de déplacer l'image à l'intérieur du conteneur */
+    top: 50%;
+    /*/ Centrer verticalement*/
+    left: 50%;
+    /*/ Centrer horizontalement*/
+    transform: translate(-50%, -50%);
+    /*/ Ajuste la position pour un centrage parfait*/
+    width: 100%;
+    /*/ Peut ajuster cette valeur selon la taille que tu veux pour l'image*/
+    height: 100%;
+    /*/ Peut aussi ajuster selon la taille*/
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+  /* Fin de div_container_photos_accueil */
+  .btnVoirPlus {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100vw;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+  }
+  .btnVoirPlus button {
+    display: block;
+    width: 80vw;
+  }
   /*------------------------------------------ Page single -------------------------*/
   .single_post_article {
     position: relative;
@@ -590,11 +662,9 @@
     padding: 0;
     border-bottom: 0px;
   }
-  
   .entry-meta {
     display: none;
   }
-  
   .infos_du_post {
     position: relative;
     bottom: 0px;
@@ -608,11 +678,9 @@
     padding-bottom: 3em;
     text-transform: uppercase;
   }
-  
   hr {
     display: none;
   }
-
   .image_du_post {
     position: relative;
     top: -9vh;
@@ -622,7 +690,6 @@
     width: 80vw;
     padding: 0;
   }
-
   .image_du_post img.img_portrait {
     display: block;
     position: relative;
@@ -649,9 +716,8 @@
     -o-object-fit: contain;
     object-fit: contain;
   }
-
   .contact_ref_img {
-    position:relative;
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -662,13 +728,11 @@
     padding-bottom: 2vh;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
-    
-    button {
-      width: 80vw;
-      margin-top: 20px;
-    }
   }
-  
+  .contact_ref_img button {
+    width: 80vw;
+    margin-top: 20px;
+  }
   .contact_et_nav {
     display: flex;
     flex-direction: row;
@@ -677,7 +741,6 @@
     width: 100vw;
     left: 0vw;
   }
-  
   .divNavSinglePost {
     display: flex;
     flex-direction: row;
@@ -687,19 +750,16 @@
     width: 80vw;
     left: 13vw;
   }
-  
   .prev_next_post-nav {
     display: none;
     flex-direction: column;
     align-items: center;
     margin-top: 1vh;
   }
-  
   .postNavThumbnail {
     display: block;
     width: 5vw;
   }
-  
   .PostNavFleches {
     display: flex;
     flex-direction: row;
@@ -709,7 +769,6 @@
     padding-left: 1vw;
     padding-right: 1vw;
   }
-  
   /*------------------ 2 images liées ----------------------------*/
   .photosLiees {
     position: relative;
@@ -725,14 +784,12 @@
     margin-top: 2em;
     margin-bottom: 2em;
   }
-  
   .imgX2 {
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
-  
   .randomImgLink {
     position: relative;
     display: flex;
@@ -742,24 +799,29 @@
     overflow: hidden;
   }
   .randomImgLink img {
-    position: absolute; /* Permet de déplacer l'image à l'intérieur du conteneur */
-    top: 50%; /* Centrer verticalement */
-    left: 50%; /* Centrer horizontalement */
-    transform: translate(-50%, -50%); /* Ajuste la position pour un centrage parfait */
-    width: 100%; /* Peut ajuster cette valeur selon la taille que tu veux pour l'image */
-    height: 100%; /* Peut aussi ajuster selon la taille */
+    position: absolute;
+    /* Permet de déplacer l'image à l'intérieur du conteneur */
+    top: 50%;
+    /* Centrer verticalement */
+    left: 50%;
+    /* Centrer horizontalement */
+    transform: translate(-50%, -50%);
+    /* Ajuste la position pour un centrage parfait */
+    width: 100%;
+    /* Peut ajuster cette valeur selon la taille que tu veux pour l'image */
+    height: 100%;
+    /* Peut aussi ajuster selon la taille */
     -o-object-fit: cover;
     object-fit: cover;
     padding: 0.5em;
   }
-
   /*-------------------------------------------- Footer -----------------------------------------*/
   .footer-nav-wrap {
-    position:relative;
+    position: relative;
     width: 100vw;
     height: 10vh;
     align-items: center;
-    bottom: -33vh;
   }
+}
 
-}/* Fin de @media (max-width: 480px) */
+/* Fin de @media (max-width: 480px) */
