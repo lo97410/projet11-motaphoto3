@@ -144,8 +144,8 @@ if ($categories_slug && !is_wp_error($categories_slug)) {
             ),
         ),
     );
-    /*print_r($args);//////
-    Array
+    //print_r($args);//////
+    /*Array
         (
             [post_type] => photo
             [posts_per_page] => 2
@@ -168,9 +168,8 @@ if ($categories_slug && !is_wp_error($categories_slug)) {
     if ($query->have_posts()) {
         
         if($isSingledPost !== false) {
-            echo "<section class='photosLiees' >";
-            echo "<h3>VOUS AIMEREZ AUSSI</h3>";
-            echo "\n <div class='imgX2' >";
+            
+            $posts_array = array();
 
             while ($query->have_posts()) {
                 $query->the_post();
@@ -184,62 +183,61 @@ if ($categories_slug && !is_wp_error($categories_slug)) {
                         'url'     => get_permalink(),
                         'image'   => get_the_post_thumbnail_url(get_the_ID(), 'full'),
                     ];
-                }
+                }// Fin de if($post_id_boucle_while !== $curent_postPage_id)
             }// Fin de while ($query->have_posts())
 
             // Mélange 3x l'ordre des posts
             uasort($posts_array, fn() => rand(-1, 1));
             $selected_posts = array_slice($posts_array, 0, 2);
+            //print_r($selected_posts);//////
 
-            foreach($selected_posts as $key_postArray => $value_postArray) {
-                /*echo '- Nombre total de posts récupérés : ' . count($posts_array) . '<br>';//////
-                print_r($value_postArray);//////
-                Array
-                    (
-                        [ID] => 311
-                        [title] => Team mariée
-                        [url] => http://127.0.0.1/ocdevwp-projet11/motaphoto3/photo/team-mariee/
-                        [image] => http://127.0.0.1/ocdevwp-projet11/motaphoto3/wp-content/uploads/2025/02/nathalie-15-pso.jpg
-                    )
-                    Array
-                    (
-                        [ID] => 310
-                        [title] => Du soir au matin
-                        [url] => http://127.0.0.1/ocdevwp-projet11/motaphoto3/photo/du-soir-au-matin/
-                        [image] => http://127.0.0.1/ocdevwp-projet11/motaphoto3/wp-content/uploads/2025/02/nathalie-14-pso.jpg
-                    )
-                    Array
-                    (
-                        [ID] => 311
-                        [title] => Team mariée
-                        [url] => http://127.0.0.1/ocdevwp-projet11/motaphoto3/photo/team-mariee/
-                        [image] => http://127.0.0.1/ocdevwp-projet11/motaphoto3/wp-content/uploads/2025/02/nathalie-15-pso.jpg
-                    )
-            }*/
+            if (!empty($selected_posts)) {
+                echo "<section class='photosLiees' >";
+                echo "<h3>VOUS AIMEREZ AUSSI</h3>";
+                echo "\n <div class='imgX2' >";
 
-                $curent_id = $value_postArray['ID'];
-                $curent_titre = $value_postArray['title'];
-                $curent_image_url = $value_postArray['image'];
-                $curent_image_url = $curent_image_url.".webp";
+                foreach($selected_posts as $key_postArray => $value_postArray) {
+                    //echo '- Nombre total de posts récupérés : ' . count($posts_array) . '<br>';//////
+                    //print_r($value_postArray);//////
+                    /*Array
+                        (
+                            [ID] => 311
+                            [title] => Team mariée
+                            [url] => http://127.0.0.1/ocdevwp-projet11/motaphoto3/photo/team-mariee/
+                            [image] => http://127.0.0.1/ocdevwp-projet11/motaphoto3/wp-content/uploads/2025/02/nathalie-15-pso.jpg
+                        )
+                        Array
+                        (...)*/
+                //}
 
-                $curent_post_url = $value_postArray['url'];
+                    $curent_id = $value_postArray['ID'];
+                    $curent_titre = $value_postArray['title'];
+                    $curent_image_url = $value_postArray['image'];
+                    $curent_image_url = $curent_image_url.".webp";
 
-                if($curent_id !== $post_id) {
-                    echo "\n <a href='".$curent_post_url."' title='".$curent_titre."' class='randomImgLink' >";
-                        echo "<img src='".$curent_image_url."' title='".$curent_titre."' alt='".$curent_titre."' >";
-                    echo "</a>";
-                }
-                else {
-                    echo "<p> Pas d'autres photos dans cette catégorie";
-                }
+                    $curent_post_url = $value_postArray['url'];
 
-            } // Fin de foreach($selected_posts as $key_postArray => $value_postArray)
+                    if($curent_id !== $post_id) {
+                        echo "\n <a href='".$curent_post_url."' title='".$curent_titre."' class='randomImgLink' >";
+                            echo "<img src='".$curent_image_url."' title='".$curent_titre."' alt='".$curent_titre."' >";
+                        echo "</a>";
+                    }// Fin de if($curent_id !== $post_id)
+                    
+                }// Fin de foreach($selected_posts as $key_postArray => $value_postArray)
+            }
+            else {
+                echo "<section class='photosLiees' >";
+                echo "\n <div class='imgX2' >";
+                echo "<p> Pas d'autres photos dans cette catégorie";
+                }// Fin de if (!empty($selected_posts))
 
 
-        }// Fin de if ($query->have_posts())
+        } else {
+            echo "\n <p>Aucune photo trouvée.</p>";
+            }// Fin de if($isSingledPost !== false)
     } else {
         echo "\n <p>Aucune photo trouvée.</p>";
-    }// Fin de if ($query->have_posts()) + else
+        }// Fin de if ($query->have_posts()) + else
 
     echo '</div>';
 echo "</section>";

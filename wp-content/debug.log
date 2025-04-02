@@ -8520,3 +8520,1058 @@
     [post_status] => publish
 )
 
+[25-Mar-2025 12:00:32 UTC] PHP Warning:  Attempt to read property "ID" on string in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\bloc_2photos_dans_single.php on line 19
+[25-Mar-2025 12:00:49 UTC] PHP Warning:  Attempt to read property "ID" on string in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\bloc_2photos_dans_single.php on line 19
+[25-Mar-2025 12:00:55 UTC] PHP Warning:  Attempt to read property "ID" on string in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\bloc_2photos_dans_single.php on line 19
+[25-Mar-2025 12:03:11 UTC] PHP Warning:  Attempt to read property "ID" on string in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\bloc_2photos_dans_single.php on line 19
+[25-Mar-2025 12:04:15 UTC] PHP Warning:  Attempt to read property "ID" on string in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\bloc_2photos_dans_single.php on line 19
+[25-Mar-2025 12:04:29 UTC] PHP Warning:  Attempt to read property "ID" on string in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\bloc_2photos_dans_single.php on line 19
+[25-Mar-2025 12:04:39 UTC] PHP Warning:  Attempt to read property "ID" on string in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\bloc_2photos_dans_single.php on line 19
+[25-Mar-2025 12:05:12 UTC] Array
+(
+    [action] => voir_plus_photos
+    [paged] => 2
+)
+
+[25-Mar-2025 12:05:12 UTC] Arguments WP_Query : Array
+(
+    [post_type] => photo
+    [posts_per_page] => 8
+    [paged] => 2
+    [post_status] => publish
+)
+
+[25-Mar-2025 12:05:12 UTC] Nombre de posts trouvés : 16
+[25-Mar-2025 12:05:12 UTC] Arguments AJAX : Array
+(
+    [post_type] => photo
+    [posts_per_page] => 8
+    [paged] => 2
+    [post_status] => publish
+)
+
+[25-Mar-2025 13:37:10 UTC] Automatic updates starting...
+[25-Mar-2025 13:37:11 UTC]   Automatic plugin updates starting...
+[25-Mar-2025 13:37:11 UTC]   Automatic plugin updates complete.
+[25-Mar-2025 13:37:12 UTC]   Automatic theme updates starting...
+[25-Mar-2025 13:37:12 UTC]   Automatic theme updates complete.
+[25-Mar-2025 13:37:12 UTC] Automatic updates complete.
+[25-Mar-2025 13:41:19 UTC] Array
+(
+    [action] => voir_plus_photos
+    [paged] => 2
+)
+
+[25-Mar-2025 13:41:19 UTC] Arguments WP_Query : Array
+(
+    [post_type] => photo
+    [posts_per_page] => 8
+    [paged] => 2
+    [post_status] => publish
+)
+
+[25-Mar-2025 13:41:19 UTC] Nombre de posts trouvés : 16
+[25-Mar-2025 13:41:19 UTC] Arguments AJAX : Array
+(
+    [post_type] => photo
+    [posts_per_page] => 8
+    [paged] => 2
+    [post_status] => publish
+)
+
+[25-Mar-2025 13:42:37 UTC] Array
+(
+    [action] => get_photos
+    [categorie] => concert
+    [format] => 
+    [type] => 
+    [annee] => 
+)
+
+[25-Mar-2025 13:42:37 UTC] Arguments WP_Query : Array
+(
+    [post_type] => photo
+    [posts_per_page] => -1
+    [tax_query] => Array
+        (
+            [relation] => AND
+            [0] => Array
+                (
+                    [taxonomy] => categorie
+                    [field] => slug
+                    [terms] => concert
+                )
+
+        )
+
+    [meta_query] => Array
+        (
+            [relation] => AND
+        )
+
+)
+
+[25-Mar-2025 13:42:37 UTC] Nombre de posts trouvés : 4
+[25-Mar-2025 13:42:37 UTC] Arguments AJAX : Array
+(
+    [post_type] => photo
+    [posts_per_page] => -1
+    [tax_query] => Array
+        (
+            [relation] => AND
+            [0] => Array
+                (
+                    [taxonomy] => categorie
+                    [field] => slug
+                    [terms] => concert
+                )
+
+        )
+
+    [meta_query] => Array
+        (
+            [relation] => AND
+        )
+
+)
+
+[25-Mar-2025 13:42:45 UTC] Array
+(
+    [action] => get_photos
+    [categorie] => concert
+    [format] => paysage
+    [type] => 
+    [annee] => 
+)
+
+[25-Mar-2025 13:42:45 UTC] Arguments WP_Query : Array
+(
+    [post_type] => photo
+    [posts_per_page] => -1
+    [tax_query] => Array
+        (
+            [relation] => AND
+            [0] => Array
+                (
+                    [taxonomy] => categorie
+                    [field] => slug
+                    [terms] => concert
+                )
+
+            [1] => Array
+                (
+                    [taxonomy] => format
+                    [field] => slug
+                    [terms] => paysage
+                )
+
+        )
+
+    [meta_query] => Array
+        (
+            [relation] => AND
+        )
+
+)
+
+[25-Mar-2025 13:42:45 UTC] Nombre de posts trouvés : 3
+[25-Mar-2025 13:42:45 UTC] Arguments AJAX : Array
+(
+    [post_type] => photo
+    [posts_per_page] => -1
+    [tax_query] => Array
+        (
+            [relation] => AND
+            [0] => Array
+                (
+                    [taxonomy] => categorie
+                    [field] => slug
+                    [terms] => concert
+                )
+
+            [1] => Array
+                (
+                    [taxonomy] => format
+                    [field] => slug
+                    [terms] => paysage
+                )
+
+        )
+
+    [meta_query] => Array
+        (
+            [relation] => AND
+        )
+
+)
+
+[25-Mar-2025 13:42:56 UTC] Array
+(
+    [action] => get_photos
+    [categorie] => concert
+    [format] => paysage
+    [type] => 
+    [annee] => 2021
+)
+
+[25-Mar-2025 13:42:56 UTC] Arguments WP_Query : Array
+(
+    [post_type] => photo
+    [posts_per_page] => -1
+    [tax_query] => Array
+        (
+            [relation] => AND
+            [0] => Array
+                (
+                    [taxonomy] => categorie
+                    [field] => slug
+                    [terms] => concert
+                )
+
+            [1] => Array
+                (
+                    [taxonomy] => format
+                    [field] => slug
+                    [terms] => paysage
+                )
+
+        )
+
+    [meta_query] => Array
+        (
+            [relation] => AND
+            [0] => Array
+                (
+                    [key] => annee
+                    [value] => 2021
+                    [compare] => =
+                )
+
+        )
+
+)
+
+[25-Mar-2025 13:42:56 UTC] Nombre de posts trouvés : 1
+[25-Mar-2025 13:42:56 UTC] Arguments AJAX : Array
+(
+    [post_type] => photo
+    [posts_per_page] => -1
+    [tax_query] => Array
+        (
+            [relation] => AND
+            [0] => Array
+                (
+                    [taxonomy] => categorie
+                    [field] => slug
+                    [terms] => concert
+                )
+
+            [1] => Array
+                (
+                    [taxonomy] => format
+                    [field] => slug
+                    [terms] => paysage
+                )
+
+        )
+
+    [meta_query] => Array
+        (
+            [relation] => AND
+            [0] => Array
+                (
+                    [key] => annee
+                    [value] => 2021
+                    [compare] => =
+                )
+
+        )
+
+)
+
+[25-Mar-2025 13:43:05 UTC] Array
+(
+    [action] => get_photos
+    [categorie] => concert
+    [format] => paysage
+    [type] => 
+    [annee] => 
+)
+
+[25-Mar-2025 13:43:05 UTC] Arguments WP_Query : Array
+(
+    [post_type] => photo
+    [posts_per_page] => -1
+    [tax_query] => Array
+        (
+            [relation] => AND
+            [0] => Array
+                (
+                    [taxonomy] => categorie
+                    [field] => slug
+                    [terms] => concert
+                )
+
+            [1] => Array
+                (
+                    [taxonomy] => format
+                    [field] => slug
+                    [terms] => paysage
+                )
+
+        )
+
+    [meta_query] => Array
+        (
+            [relation] => AND
+        )
+
+)
+
+[25-Mar-2025 13:43:05 UTC] Nombre de posts trouvés : 3
+[25-Mar-2025 13:43:05 UTC] Arguments AJAX : Array
+(
+    [post_type] => photo
+    [posts_per_page] => -1
+    [tax_query] => Array
+        (
+            [relation] => AND
+            [0] => Array
+                (
+                    [taxonomy] => categorie
+                    [field] => slug
+                    [terms] => concert
+                )
+
+            [1] => Array
+                (
+                    [taxonomy] => format
+                    [field] => slug
+                    [terms] => paysage
+                )
+
+        )
+
+    [meta_query] => Array
+        (
+            [relation] => AND
+        )
+
+)
+
+[25-Mar-2025 13:46:43 UTC] Array
+(
+    [action] => voir_plus_photos
+    [paged] => 2
+)
+
+[25-Mar-2025 13:46:43 UTC] Arguments WP_Query : Array
+(
+    [post_type] => photo
+    [posts_per_page] => 8
+    [paged] => 2
+    [post_status] => publish
+)
+
+[25-Mar-2025 13:46:43 UTC] Nombre de posts trouvés : 16
+[25-Mar-2025 13:46:43 UTC] Arguments AJAX : Array
+(
+    [post_type] => photo
+    [posts_per_page] => 8
+    [paged] => 2
+    [post_status] => publish
+)
+
+[02-Apr-2025 07:38:48 UTC] Automatic updates starting...
+[02-Apr-2025 07:38:49 UTC]   Automatic plugin updates starting...
+[02-Apr-2025 07:38:49 UTC]   Automatic plugin updates complete.
+[02-Apr-2025 07:38:49 UTC]   Automatic theme updates starting...
+[02-Apr-2025 07:38:49 UTC]   Automatic theme updates complete.
+[02-Apr-2025 07:38:49 UTC] Automatic updates complete.
+[02-Apr-2025 07:39:39 UTC] Array
+(
+    [action] => get_photos
+    [categorie] => 
+    [format] => 
+    [type] => 
+    [annee] => 2021
+)
+
+[02-Apr-2025 07:39:39 UTC] Arguments WP_Query : Array
+(
+    [post_type] => photo
+    [posts_per_page] => -1
+    [tax_query] => Array
+        (
+            [relation] => AND
+        )
+
+    [meta_query] => Array
+        (
+            [relation] => AND
+            [0] => Array
+                (
+                    [key] => annee
+                    [value] => 2021
+                    [compare] => =
+                )
+
+        )
+
+)
+
+[02-Apr-2025 07:39:39 UTC] Nombre de posts trouvés : 3
+[02-Apr-2025 07:39:39 UTC] Arguments AJAX : Array
+(
+    [post_type] => photo
+    [posts_per_page] => -1
+    [tax_query] => Array
+        (
+            [relation] => AND
+        )
+
+    [meta_query] => Array
+        (
+            [relation] => AND
+            [0] => Array
+                (
+                    [key] => annee
+                    [value] => 2021
+                    [compare] => =
+                )
+
+        )
+
+)
+
+[02-Apr-2025 07:39:43 UTC] Array
+(
+    [action] => get_photos
+    [categorie] => 
+    [format] => paysage
+    [type] => 
+    [annee] => 2021
+)
+
+[02-Apr-2025 07:39:43 UTC] Arguments WP_Query : Array
+(
+    [post_type] => photo
+    [posts_per_page] => -1
+    [tax_query] => Array
+        (
+            [relation] => AND
+            [0] => Array
+                (
+                    [taxonomy] => format
+                    [field] => slug
+                    [terms] => paysage
+                )
+
+        )
+
+    [meta_query] => Array
+        (
+            [relation] => AND
+            [0] => Array
+                (
+                    [key] => annee
+                    [value] => 2021
+                    [compare] => =
+                )
+
+        )
+
+)
+
+[02-Apr-2025 07:39:43 UTC] Nombre de posts trouvés : 1
+[02-Apr-2025 07:39:43 UTC] Arguments AJAX : Array
+(
+    [post_type] => photo
+    [posts_per_page] => -1
+    [tax_query] => Array
+        (
+            [relation] => AND
+            [0] => Array
+                (
+                    [taxonomy] => format
+                    [field] => slug
+                    [terms] => paysage
+                )
+
+        )
+
+    [meta_query] => Array
+        (
+            [relation] => AND
+            [0] => Array
+                (
+                    [key] => annee
+                    [value] => 2021
+                    [compare] => =
+                )
+
+        )
+
+)
+
+[02-Apr-2025 07:39:50 UTC] Array
+(
+    [action] => get_photos
+    [categorie] => concert
+    [format] => paysage
+    [type] => 
+    [annee] => 2021
+)
+
+[02-Apr-2025 07:39:50 UTC] Arguments WP_Query : Array
+(
+    [post_type] => photo
+    [posts_per_page] => -1
+    [tax_query] => Array
+        (
+            [relation] => AND
+            [0] => Array
+                (
+                    [taxonomy] => categorie
+                    [field] => slug
+                    [terms] => concert
+                )
+
+            [1] => Array
+                (
+                    [taxonomy] => format
+                    [field] => slug
+                    [terms] => paysage
+                )
+
+        )
+
+    [meta_query] => Array
+        (
+            [relation] => AND
+            [0] => Array
+                (
+                    [key] => annee
+                    [value] => 2021
+                    [compare] => =
+                )
+
+        )
+
+)
+
+[02-Apr-2025 07:39:50 UTC] Nombre de posts trouvés : 1
+[02-Apr-2025 07:39:50 UTC] Arguments AJAX : Array
+(
+    [post_type] => photo
+    [posts_per_page] => -1
+    [tax_query] => Array
+        (
+            [relation] => AND
+            [0] => Array
+                (
+                    [taxonomy] => categorie
+                    [field] => slug
+                    [terms] => concert
+                )
+
+            [1] => Array
+                (
+                    [taxonomy] => format
+                    [field] => slug
+                    [terms] => paysage
+                )
+
+        )
+
+    [meta_query] => Array
+        (
+            [relation] => AND
+            [0] => Array
+                (
+                    [key] => annee
+                    [value] => 2021
+                    [compare] => =
+                )
+
+        )
+
+)
+
+[02-Apr-2025 07:39:59 UTC] Array
+(
+    [action] => get_photos
+    [categorie] => mariage
+    [format] => paysage
+    [type] => 
+    [annee] => 2021
+)
+
+[02-Apr-2025 07:39:59 UTC] Arguments WP_Query : Array
+(
+    [post_type] => photo
+    [posts_per_page] => -1
+    [tax_query] => Array
+        (
+            [relation] => AND
+            [0] => Array
+                (
+                    [taxonomy] => categorie
+                    [field] => slug
+                    [terms] => mariage
+                )
+
+            [1] => Array
+                (
+                    [taxonomy] => format
+                    [field] => slug
+                    [terms] => paysage
+                )
+
+        )
+
+    [meta_query] => Array
+        (
+            [relation] => AND
+            [0] => Array
+                (
+                    [key] => annee
+                    [value] => 2021
+                    [compare] => =
+                )
+
+        )
+
+)
+
+[02-Apr-2025 07:39:59 UTC] Nombre de posts trouvés : 0
+[02-Apr-2025 07:39:59 UTC] Arguments AJAX : Array
+(
+    [post_type] => photo
+    [posts_per_page] => -1
+    [tax_query] => Array
+        (
+            [relation] => AND
+            [0] => Array
+                (
+                    [taxonomy] => categorie
+                    [field] => slug
+                    [terms] => mariage
+                )
+
+            [1] => Array
+                (
+                    [taxonomy] => format
+                    [field] => slug
+                    [terms] => paysage
+                )
+
+        )
+
+    [meta_query] => Array
+        (
+            [relation] => AND
+            [0] => Array
+                (
+                    [key] => annee
+                    [value] => 2021
+                    [compare] => =
+                )
+
+        )
+
+)
+
+[02-Apr-2025 07:40:03 UTC] Array
+(
+    [action] => get_photos
+    [categorie] => mariage
+    [format] => 
+    [type] => 
+    [annee] => 2021
+)
+
+[02-Apr-2025 07:40:03 UTC] Arguments WP_Query : Array
+(
+    [post_type] => photo
+    [posts_per_page] => -1
+    [tax_query] => Array
+        (
+            [relation] => AND
+            [0] => Array
+                (
+                    [taxonomy] => categorie
+                    [field] => slug
+                    [terms] => mariage
+                )
+
+        )
+
+    [meta_query] => Array
+        (
+            [relation] => AND
+            [0] => Array
+                (
+                    [key] => annee
+                    [value] => 2021
+                    [compare] => =
+                )
+
+        )
+
+)
+
+[02-Apr-2025 07:40:03 UTC] Nombre de posts trouvés : 1
+[02-Apr-2025 07:40:03 UTC] Arguments AJAX : Array
+(
+    [post_type] => photo
+    [posts_per_page] => -1
+    [tax_query] => Array
+        (
+            [relation] => AND
+            [0] => Array
+                (
+                    [taxonomy] => categorie
+                    [field] => slug
+                    [terms] => mariage
+                )
+
+        )
+
+    [meta_query] => Array
+        (
+            [relation] => AND
+            [0] => Array
+                (
+                    [key] => annee
+                    [value] => 2021
+                    [compare] => =
+                )
+
+        )
+
+)
+
+[02-Apr-2025 07:40:10 UTC] Array
+(
+    [action] => get_photos
+    [categorie] => mariage
+    [format] => 
+    [type] => Numérique
+    [annee] => 
+)
+
+[02-Apr-2025 07:40:10 UTC] Arguments WP_Query : Array
+(
+    [post_type] => photo
+    [posts_per_page] => -1
+    [tax_query] => Array
+        (
+            [relation] => AND
+            [0] => Array
+                (
+                    [taxonomy] => categorie
+                    [field] => slug
+                    [terms] => mariage
+                )
+
+        )
+
+    [meta_query] => Array
+        (
+            [relation] => AND
+            [0] => Array
+                (
+                    [key] => type
+                    [value] => Numérique
+                    [compare] => =
+                )
+
+        )
+
+)
+
+[02-Apr-2025 07:40:10 UTC] Nombre de posts trouvés : 7
+[02-Apr-2025 07:40:10 UTC] Arguments AJAX : Array
+(
+    [post_type] => photo
+    [posts_per_page] => -1
+    [tax_query] => Array
+        (
+            [relation] => AND
+            [0] => Array
+                (
+                    [taxonomy] => categorie
+                    [field] => slug
+                    [terms] => mariage
+                )
+
+        )
+
+    [meta_query] => Array
+        (
+            [relation] => AND
+            [0] => Array
+                (
+                    [key] => type
+                    [value] => Numérique
+                    [compare] => =
+                )
+
+        )
+
+)
+
+[02-Apr-2025 07:40:17 UTC] PHP Warning:  Attempt to read property "ID" on string in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\bloc_2photos_dans_single.php on line 19
+[02-Apr-2025 08:20:58 UTC] PHP Warning:  Attempt to read property "ID" on string in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\bloc_2photos_dans_single.php on line 16
+[02-Apr-2025 08:22:19 UTC] PHP Warning:  Attempt to read property "ID" on string in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\bloc_2photos_dans_single.php on line 16
+[02-Apr-2025 08:22:53 UTC] Array
+(
+    [action] => voir_plus_photos
+    [paged] => 2
+)
+
+[02-Apr-2025 08:22:53 UTC] Arguments WP_Query : Array
+(
+    [post_type] => photo
+    [posts_per_page] => 8
+    [paged] => 2
+    [post_status] => publish
+)
+
+[02-Apr-2025 08:22:53 UTC] Nombre de posts trouvés : 16
+[02-Apr-2025 08:22:53 UTC] Arguments AJAX : Array
+(
+    [post_type] => photo
+    [posts_per_page] => 8
+    [paged] => 2
+    [post_status] => publish
+)
+
+[02-Apr-2025 08:23:07 UTC] Array
+(
+    [action] => get_photos
+    [categorie] => mariage
+    [format] => 
+    [type] => 
+    [annee] => 
+)
+
+[02-Apr-2025 08:23:07 UTC] Arguments WP_Query : Array
+(
+    [post_type] => photo
+    [posts_per_page] => -1
+    [tax_query] => Array
+        (
+            [relation] => AND
+            [0] => Array
+                (
+                    [taxonomy] => categorie
+                    [field] => slug
+                    [terms] => mariage
+                )
+
+        )
+
+    [meta_query] => Array
+        (
+            [relation] => AND
+        )
+
+)
+
+[02-Apr-2025 08:23:07 UTC] Nombre de posts trouvés : 9
+[02-Apr-2025 08:23:07 UTC] Arguments AJAX : Array
+(
+    [post_type] => photo
+    [posts_per_page] => -1
+    [tax_query] => Array
+        (
+            [relation] => AND
+            [0] => Array
+                (
+                    [taxonomy] => categorie
+                    [field] => slug
+                    [terms] => mariage
+                )
+
+        )
+
+    [meta_query] => Array
+        (
+            [relation] => AND
+        )
+
+)
+
+[02-Apr-2025 08:23:15 UTC] Array
+(
+    [action] => get_photos
+    [categorie] => 
+    [format] => 
+    [type] => 
+    [annee] => 
+)
+
+[02-Apr-2025 08:23:15 UTC] Arguments WP_Query : Array
+(
+    [post_type] => photo
+    [posts_per_page] => -1
+    [tax_query] => Array
+        (
+            [relation] => AND
+        )
+
+    [meta_query] => Array
+        (
+            [relation] => AND
+        )
+
+)
+
+[02-Apr-2025 08:23:15 UTC] Nombre de posts trouvés : 16
+[02-Apr-2025 08:23:15 UTC] Arguments AJAX : Array
+(
+    [post_type] => photo
+    [posts_per_page] => -1
+    [tax_query] => Array
+        (
+            [relation] => AND
+        )
+
+    [meta_query] => Array
+        (
+            [relation] => AND
+        )
+
+)
+
+[02-Apr-2025 08:23:31 UTC] Array
+(
+    [action] => voir_plus_photos
+    [paged] => 2
+)
+
+[02-Apr-2025 08:23:31 UTC] Arguments WP_Query : Array
+(
+    [post_type] => photo
+    [posts_per_page] => 8
+    [paged] => 2
+    [post_status] => publish
+)
+
+[02-Apr-2025 08:23:31 UTC] Nombre de posts trouvés : 16
+[02-Apr-2025 08:23:31 UTC] Arguments AJAX : Array
+(
+    [post_type] => photo
+    [posts_per_page] => 8
+    [paged] => 2
+    [post_status] => publish
+)
+
+[02-Apr-2025 08:29:26 UTC] Array
+(
+    [action] => voir_plus_photos
+    [paged] => 2
+)
+
+[02-Apr-2025 08:29:26 UTC] Arguments WP_Query : Array
+(
+    [post_type] => photo
+    [posts_per_page] => 8
+    [paged] => 2
+    [post_status] => publish
+)
+
+[02-Apr-2025 08:29:26 UTC] Nombre de posts trouvés : 16
+[02-Apr-2025 08:29:26 UTC] Arguments AJAX : Array
+(
+    [post_type] => photo
+    [posts_per_page] => 8
+    [paged] => 2
+    [post_status] => publish
+)
+
+[02-Apr-2025 08:29:31 UTC] PHP Warning:  Attempt to read property "ID" on string in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\bloc_2photos_dans_single.php on line 16
+[02-Apr-2025 08:29:36 UTC] PHP Warning:  Attempt to read property "ID" on string in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\bloc_2photos_dans_single.php on line 16
+[02-Apr-2025 08:29:56 UTC] PHP Warning:  Attempt to read property "ID" on string in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\bloc_2photos_dans_single.php on line 16
+[02-Apr-2025 08:37:38 UTC] PHP Warning:  Attempt to read property "ID" on string in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\bloc_2photos_dans_single.php on line 16
+[02-Apr-2025 08:38:45 UTC] PHP Warning:  Attempt to read property "ID" on string in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\bloc_2photos_dans_single.php on line 16
+[02-Apr-2025 08:39:19 UTC] PHP Warning:  Attempt to read property "ID" on string in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\bloc_2photos_dans_single.php on line 16
+[02-Apr-2025 08:41:11 UTC] PHP Warning:  Attempt to read property "ID" on string in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\bloc_2photos_dans_single.php on line 16
+[02-Apr-2025 08:41:44 UTC] PHP Warning:  Attempt to read property "ID" on string in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\bloc_2photos_dans_single.php on line 16
+[02-Apr-2025 08:42:09 UTC] PHP Warning:  Attempt to read property "ID" on string in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\bloc_2photos_dans_single.php on line 16
+[02-Apr-2025 08:44:11 UTC] PHP Warning:  Attempt to read property "ID" on string in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\bloc_2photos_dans_single.php on line 16
+[02-Apr-2025 08:44:28 UTC] PHP Warning:  Attempt to read property "ID" on string in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\bloc_2photos_dans_single.php on line 16
+[02-Apr-2025 08:47:51 UTC] PHP Warning:  Attempt to read property "ID" on string in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\bloc_2photos_dans_single.php on line 19
+[02-Apr-2025 08:47:58 UTC] PHP Warning:  Attempt to read property "ID" on string in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\bloc_2photos_dans_single.php on line 19
+[02-Apr-2025 08:50:06 UTC] PHP Warning:  Attempt to read property "ID" on string in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\bloc_2photos_dans_single.php on line 19
+[02-Apr-2025 08:50:26 UTC] PHP Warning:  Attempt to read property "ID" on string in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\bloc_2photos_dans_single.php on line 19
+[02-Apr-2025 08:50:49 UTC] PHP Warning:  Attempt to read property "ID" on string in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\bloc_2photos_dans_single.php on line 19
+[02-Apr-2025 08:51:01 UTC] PHP Warning:  Attempt to read property "ID" on string in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\bloc_2photos_dans_single.php on line 19
+[02-Apr-2025 08:51:54 UTC] PHP Warning:  Attempt to read property "ID" on string in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\bloc_2photos_dans_single.php on line 19
+[02-Apr-2025 08:52:09 UTC] PHP Warning:  Attempt to read property "ID" on string in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\bloc_2photos_dans_single.php on line 19
+[02-Apr-2025 08:52:21 UTC] PHP Warning:  Attempt to read property "ID" on string in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\bloc_2photos_dans_single.php on line 19
+[02-Apr-2025 08:52:43 UTC] PHP Warning:  Attempt to read property "ID" on string in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\bloc_2photos_dans_single.php on line 19
+[02-Apr-2025 08:53:45 UTC] PHP Warning:  Attempt to read property "ID" on string in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\bloc_2photos_dans_single.php on line 19
+[02-Apr-2025 08:53:56 UTC] PHP Warning:  Attempt to read property "ID" on string in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\bloc_2photos_dans_single.php on line 19
+[02-Apr-2025 08:54:10 UTC] PHP Warning:  Attempt to read property "ID" on string in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\bloc_2photos_dans_single.php on line 19
+[02-Apr-2025 08:54:22 UTC] PHP Warning:  Attempt to read property "ID" on string in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\bloc_2photos_dans_single.php on line 19
+[02-Apr-2025 08:54:32 UTC] PHP Warning:  Attempt to read property "ID" on string in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\bloc_2photos_dans_single.php on line 19
+[02-Apr-2025 08:54:56 UTC] PHP Warning:  Attempt to read property "ID" on string in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\bloc_2photos_dans_single.php on line 19
+[02-Apr-2025 08:55:08 UTC] PHP Warning:  Attempt to read property "ID" on string in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\bloc_2photos_dans_single.php on line 19
+[02-Apr-2025 08:56:17 UTC] PHP Warning:  Attempt to read property "ID" on string in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\bloc_2photos_dans_single.php on line 19
+[02-Apr-2025 08:56:27 UTC] PHP Warning:  Attempt to read property "ID" on string in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\bloc_2photos_dans_single.php on line 19
+[02-Apr-2025 08:56:40 UTC] PHP Warning:  Attempt to read property "ID" on string in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\bloc_2photos_dans_single.php on line 19
+[02-Apr-2025 08:57:20 UTC] PHP Warning:  Attempt to read property "ID" on string in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\bloc_2photos_dans_single.php on line 19
+[02-Apr-2025 08:57:31 UTC] PHP Warning:  Attempt to read property "ID" on string in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\bloc_2photos_dans_single.php on line 19
+[02-Apr-2025 08:57:47 UTC] PHP Warning:  Attempt to read property "ID" on string in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\bloc_2photos_dans_single.php on line 19
+[02-Apr-2025 08:58:03 UTC] PHP Warning:  Attempt to read property "ID" on string in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\bloc_2photos_dans_single.php on line 19
+[02-Apr-2025 08:58:14 UTC] PHP Warning:  Attempt to read property "ID" on string in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\bloc_2photos_dans_single.php on line 19
+[02-Apr-2025 09:00:45 UTC] PHP Warning:  Attempt to read property "ID" on string in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\bloc_2photos_dans_single.php on line 19
+[02-Apr-2025 09:14:54 UTC] Array
+(
+    [action] => voir_plus_photos
+    [paged] => 2
+)
+
+[02-Apr-2025 09:14:54 UTC] Arguments WP_Query : Array
+(
+    [post_type] => photo
+    [posts_per_page] => 8
+    [paged] => 2
+    [post_status] => publish
+)
+
+[02-Apr-2025 09:14:54 UTC] Nombre de posts trouvés : 16
+[02-Apr-2025 09:14:54 UTC] Arguments AJAX : Array
+(
+    [post_type] => photo
+    [posts_per_page] => 8
+    [paged] => 2
+    [post_status] => publish
+)
+
+[02-Apr-2025 09:17:04 UTC] Array
+(
+    [action] => voir_plus_photos
+    [paged] => 2
+)
+
+[02-Apr-2025 09:17:04 UTC] Arguments WP_Query : Array
+(
+    [post_type] => photo
+    [posts_per_page] => 8
+    [paged] => 2
+    [post_status] => publish
+)
+
+[02-Apr-2025 09:17:04 UTC] Nombre de posts trouvés : 16
+[02-Apr-2025 09:17:04 UTC] Arguments AJAX : Array
+(
+    [post_type] => photo
+    [posts_per_page] => 8
+    [paged] => 2
+    [post_status] => publish
+)
+

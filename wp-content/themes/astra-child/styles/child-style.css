@@ -470,6 +470,7 @@
   width: 79vw;
   position: relative;
   left: 10.5vw;
+  margin-top: 3vh;
   margin-bottom: 3vh;
 }
 
@@ -533,10 +534,14 @@
 }
 
 /*--------------------------------------------------------------- Mobiles ---------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------------------------------*/
 @media (max-width: 480px) {
   .site-main {
     display: flex;
     flex-direction: column;
+  }
+  h2 {
+    font-size: 2em;
   }
   .form-modale {
     display: block;
@@ -669,7 +674,7 @@
     position: relative;
     bottom: 0px;
     left: 0px;
-    top: 73vh;
+    top: 42vh;
     display: flex;
     flex-direction: column;
     justify-content: left;
@@ -683,11 +688,12 @@
   }
   .image_du_post {
     position: relative;
-    top: -9vh;
+    top: -40vh;
     left: 0;
     display: flex;
     flex-direction: column;
     width: 80vw;
+    height: 80vw;
     padding: 0;
   }
   .image_du_post img.img_portrait {
@@ -695,7 +701,6 @@
     position: relative;
     right: 0px;
     bottom: 0px;
-    top: -28vh;
     height: 100%;
     border-bottom: 3px solid white;
     max-height: none;
@@ -706,7 +711,7 @@
     display: block;
     position: relative;
     right: 0px;
-    top: -32vh;
+    top: 5vh;
     bottom: 0px;
     left: -7vw;
     width: 90vw;
@@ -723,7 +728,7 @@
     justify-content: center;
     align-items: center;
     width: 100vw;
-    top: 33vh;
+    top: 8vh;
     padding-top: 2vh;
     padding-bottom: 2vh;
     border-top: 1px solid black;
@@ -740,6 +745,7 @@
     position: relative;
     width: 100vw;
     left: 0vw;
+    /*top: -5vh;*/
   }
   .divNavSinglePost {
     display: flex;
@@ -778,7 +784,7 @@
     align-items: center;
     width: 80vw;
     left: 8vw;
-    top: 33vh;
+    top: 8vh;
   }
   .photosLiees h3 {
     margin-top: 2em;
@@ -817,10 +823,17 @@
   }
   /*-------------------------------------------- Footer -----------------------------------------*/
   .footer-nav-wrap {
+    display: block;
     position: relative;
     width: 100vw;
     height: 10vh;
     align-items: center;
+  }
+  .site-footer {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 14vh;
   }
 }
 
