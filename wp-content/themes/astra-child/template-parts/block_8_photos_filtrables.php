@@ -1,14 +1,65 @@
 <?php
 session_start();
 
-/*// Gestion de la pagination
-$curent_page = get_query_var('paged');
-//echo "*** paged : ".$curent_page." *** ";//////
+// Tableau JS de tous les posts 
+$args = array(
+    'post_type'      => 'photo',
+    'posts_per_page' => -1,
+    'post_status'    => 'publish',
+);
 
-if (!$curent_page || $curent_page < 1) {
-    $curent_page = 1; // Si la variable 'paged' est vide ou inférieure à 1, on force la valeur à 1
-}
-//echo "*** paged aftre check : ".$curent_page." *** ";//////*/
+$query = new WP_Query($args);
+
+$array_JS_posts = array();
+echo "\n <script>let arrayPostsImages = {};</script>";
+
+// Lightbox d'affichage de la photo en plein écran
+echo "\n <script>function fullScreenPhoto(imgId) {";
+
+    echo "\n var curentImgUrl = arrayPostsImages[imgId]['image'];";
+    echo "\n var curentImgTitre = arrayPostsImages[imgId]['titre'];";
+
+    echo "\n jQuery('#lightboxPhotoImg').attr('src', curentImgUrl);";
+    echo "\n jQuery('#lightboxPhotoImg').attr('title', curentImgTitre);";
+    echo "\n jQuery('#lightboxPhotoImg').attr('alt', curentImgTitre);";
+    
+    echo "\n jQuery('.lightboxPhoto').css('display', 'flex');";
+    echo "\n jQuery('.lightboxPhoto').css('opacity', '1');";
+
+    echo "\n console.log('Inside fullScreenPhoto : imgId '+imgId+' - url : '+curentImgUrl+' - titre : '+curentImgTitre);";//////
+echo "\n }";
+echo "\n </script>";
+
+if ($query->have_posts()) {
+    while ($query->have_posts()) {
+        $query->the_post();  // Prépare le post pour affichage
+
+        $postId = get_the_ID();
+        $array_JS_posts[$postId] = array();
+        $postTitle = get_the_title();
+        $array_JS_posts[$postId]['titre'] = addslashes($postTitle);
+        $imagePost = get_the_post_thumbnail_url($postId, 'full');
+        if ($imagePost !== null) {
+            $imagePost = $imagePost.".webp";
+            $array_JS_posts[$postId]['image'] = $imagePost;
+        }
+        
+        echo "<script>";
+        echo "arrayPostsImages['".$postId."'] = {";
+        echo "id: '".$postId."', ";
+        echo "titre: '".$array_JS_posts[$postId]['titre']."', ";
+        echo "image: '".$array_JS_posts[$postId]['image']."'";
+        echo "};";
+        echo "</script>";
+
+    }// Fin de while ($query->have_posts())
+    //print_r($array_JS_posts);//////
+    //echo "\n <script>console.table(arrayPostsImages);</script>";//////
+
+}// Fin de if ($query->have_posts())
+
+// Réinitialiser les données de post après la boucle
+wp_reset_postdata();
 
 // Arguments de la requête WP_Query pour obtenir les 8 premiers posts 
 $args = array(
@@ -295,8 +346,8 @@ if ($query->have_posts()) {
         echo "\n <div class='div_container_photos_accueil' id='div_container_photos_accueil' >";
 
             foreach($array_all_posts as $key_post => $array_curent_post) {
-                /*print_r($array_curent_post);//////
-                Array
+                //print_r($array_curent_post);//////
+                /*Array
                     (
                         [id] => 311
                         [titre] => Team mariée
@@ -309,9 +360,32 @@ if ($query->have_posts()) {
                         [image] => http://127.0.0.1/ocdevwp-projet11/motaphoto3/wp-content/uploads/2025/02/nathalie-15-pso-684x1024.jpg.webp
                     )*/
 
-                echo "\n <a href='".$array_curent_post['url']."' title='".$array_curent_post['titre']."' target='_blank' >";
-                    echo "\n <img src='".$array_curent_post['image']."' alt='".$array_curent_post['titre']."' title='".$array_curent_post['titre']."' >";
-                echo "\n </a>";
+                echo "\n <article class='photoAccueil' >";
+
+                    echo "\n <img src='".$array_curent_post['image']."' alt='".$array_curent_post['titre']."' title='".$array_curent_post['titre']."' id='imgSrcToIject' >";
+                
+                    // Hover photo
+                    echo "\n <div class='hoverphoto' id='hoverphoto' >";
+
+                        echo "\n <div class='iconFullScreen' >";
+                            echo "\n <a href='#' title='Voir en plein écran' id='lienPleinEcran' onclick='fullScreenPhoto(".$array_curent_post['id'].")' >";
+                                echo "\n <span><i class='fa-solid fa-expand' ></i></span>";
+                            echo "\n </a>";
+                        echo "\n </div>";
+
+                        echo "\n <div class='iconeEye' >";
+                            echo "\n <a href='".$array_curent_post['url']."' title='Voir la fiche de : ".$array_curent_post['titre']."' target='_blank' >";
+                                echo "\n <i class='fa-regular fa-eye' ></i>";
+                            echo "\n </a>";
+                        echo "\n </div>";
+
+                        echo "\n <div class='titrecategorie' >";
+                            echo "\n <span>".$array_curent_post['titre']."</span> <span>".$array_curent_post['categorie']['name']."</span>";
+                        echo "\n </div>";
+                    echo "\n </div>";
+
+                echo "\n </article>";
+
             }// Fin de foreach($array_curent_post[1] as $key_voir_plus => $array_curent_post)
         echo "\n </div>";
 
@@ -319,6 +393,13 @@ if ($query->have_posts()) {
         echo "\n <div class='btnVoirPlus' id='btnVoirPlus' >";
             echo "\n <button type='button' class='buttonVoirPlus' id='buttonVoirPlus' >Charger plus</button>";
         echo "\n </div>";
+
+        // Lightbox photo plein écran
+        echo "\n <div class='lightboxPhoto' >";
+            echo "\n <img src='' alt='' title='' id='lightboxPhotoImg' >";
+            echo "\n <div id='closeFullScreen' title='Fermer la photo' > X </div>";
+        echo "\n </div>";
+
 
         }// Fin de if($array_all_posts)
     

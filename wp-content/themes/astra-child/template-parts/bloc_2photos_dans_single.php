@@ -12,12 +12,12 @@ if($isSingledPost !== false) {
     //var_dump($prev_post);//////
     $next_post = get_next_post();
     //var_dump($next_post);//////
-    //if(!empty($prev_post)) {
+    if(!empty($prev_post)) {
         $prev_thumbnail = get_the_post_thumbnail($prev_post->ID, 'thumbnail');
-    //}
-    //if(!empty($next_post)) {
+    }
+    if(!empty($next_post)) {
         $next_thumbnail = get_the_post_thumbnail($next_post->ID, 'thumbnail');
-    //}
+    }
 
     echo "\n <section class='contact_et_nav' >";
         //--- Contact avec ref de l'image ---//

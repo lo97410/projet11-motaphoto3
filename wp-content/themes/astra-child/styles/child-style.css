@@ -433,9 +433,10 @@
   left: 10vw;
   flex-wrap: wrap;
   gap: 0.5em;
+  /* Fin de article */
 }
 
-.div_container_photos_accueil a {
+.div_container_photos_accueil article {
   position: relative;
   display: flex;
   justify-content: center;
@@ -444,24 +445,151 @@
   overflow: hidden;
 }
 
-.div_container_photos_accueil a img {
+.div_container_photos_accueil article:hover .hoverphoto {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.div_container_photos_accueil article img {
   position: absolute;
-  /*/ Permet de déplacer l'image à l'intérieur du conteneur */
+  /*/ Déplace l'image à l'intérieur du conteneur */
   top: 50%;
-  /*/ Centrer verticalement*/
+  /* Centre verticalement*/
   left: 50%;
-  /*/ Centrer horizontalement*/
+  /* Centre horizontalement*/
   transform: translate(-50%, -50%);
-  /*/ Ajuste la position pour un centrage parfait*/
+  /* Ajuste la position pour le centrage */
   width: 100%;
-  /*/ Peut ajuster cette valeur selon la taille que tu veux pour l'image*/
   height: 100%;
-  /*/ Peut aussi ajuster selon la taille*/
   -o-object-fit: cover;
   object-fit: cover;
 }
 
 /* Fin de div_container_photos_accueil */
+.hoverphoto {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  padding: 1em;
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.5));
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: 500;
+}
+
+.hoverphoto .iconFullScreen {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.hoverphoto .iconFullScreen a {
+  display: inline-block;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.hoverphoto .iconFullScreen a:hover {
+  transform: scale(1.5);
+}
+
+.hoverphoto .iconFullScreen span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.5em;
+  height: 1.5em;
+  padding: 1em;
+  border-radius: 50%;
+  color: white;
+  background-color: black;
+}
+
+.hoverphoto .iconFullScreen span li {
+  margin: 0;
+}
+
+.hoverphoto .iconeEye {
+  display: block;
+  position: relative;
+  left: 45%;
+  width: 3em;
+  text-align: center;
+  font-size: 2em;
+}
+
+.hoverphoto .iconeEye a {
+  display: inline-block;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.hoverphoto .iconeEye a:hover {
+  transform: scale(1.5);
+}
+
+.hoverphoto .titrecategorie {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  color: white;
+}
+
+.hoverphoto .titrecategorie span {
+  margin: 0;
+  text-shadow: 2px 2px 0.5px rgba(0, 0, 0, 0.3);
+}
+
+.lightboxPhoto {
+  display: none;
+  opacity: 0;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  transition: opacity 0.5s ease;
+}
+
+.lightboxPhoto img {
+  display: block;
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.lightboxPhoto #closeFullScreen {
+  display: block;
+  position: absolute;
+  top: 5vh;
+  right: 2vw;
+  font-size: 1em;
+  color: black;
+  padding: 0.2em;
+  width: 2em;
+  text-align: center;
+  background-color: grey;
+  z-index: 1100;
+  border: 1px solid white;
+  border-radius: 10%;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.lightboxPhoto #closeFullScreen:hover {
+  transform: scale(1.5);
+  border: 1px solid red;
+  color: red;
+}
+
 /*------------------ Listes déroulantes ---------------------*/
 .div_filtres {
   display: flex;
@@ -485,19 +613,6 @@
   height: 5vh;
 }
 
-.div_filtres .div_filtre_gauche select {
-  position: relative;
-  top: 0vh;
-  width: 15vw;
-  margin: 0;
-  margin-bottom: 5px;
-  text-transform: uppercase;
-}
-
-.div_filtres option:hover {
-  background-color: #FFD6D6;
-}
-
 .div_filtres .div_filtre_droite {
   display: flex;
   flex-direction: row;
@@ -510,13 +625,17 @@
   height: 5vh;
 }
 
-.div_filtres .div_filtre_droite select {
+.div_filtres select {
   position: relative;
   top: 0vh;
   width: 15vw;
   margin: 0;
   margin-bottom: 5px;
   text-transform: uppercase;
+}
+
+.div_filtres select option:hover {
+  background-color: #FFD6D6;
 }
 
 .btnVoirPlus {
@@ -584,6 +703,10 @@
     margin: 0;
     margin-bottom: 5px;
   }
+  .div_filtres .div_filtre_gauche select:hover .hoverphoto {
+    opacity: 1;
+    pointer-events: auto;
+  }
   .div_filtres .div_filtre_droite {
     flex-direction: column;
     width: 100%;
@@ -616,7 +739,7 @@
     flex-wrap: wrap;
     gap: 0.5em;
   }
-  .div_container_photos_accueil a {
+  .div_container_photos_accueil article {
     position: relative;
     display: flex;
     justify-content: center;
@@ -624,7 +747,7 @@
     height: 35vh;
     overflow: hidden;
   }
-  .div_container_photos_accueil a img {
+  .div_container_photos_accueil article img {
     position: absolute;
     /*/ Permet de déplacer l'image à l'intérieur du conteneur */
     top: 50%;
@@ -639,6 +762,13 @@
     /*/ Peut aussi ajuster selon la taille*/
     -o-object-fit: cover;
     object-fit: cover;
+  }
+  .div_container_photos_accueil .hoverphoto {
+    opacity: 1;
+    background: none;
+  }
+  .div_container_photos_accueil .hoverphoto .iconeEye {
+    left: 35%;
   }
   /* Fin de div_container_photos_accueil */
   .btnVoirPlus {

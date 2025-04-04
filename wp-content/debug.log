@@ -9575,3 +9575,719 @@
     [post_status] => publish
 )
 
+[02-Apr-2025 10:54:14 UTC] PHP Warning:  require_once(C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\plugins\webp-express/lib/classes/DismissableGlobalMessages.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\plugins\webp-express\webp-express.php on line 28
+[02-Apr-2025 10:54:14 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\plugins\webp-express/lib/classes/DismissableGlobalMessages.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\plugins\webp-express\webp-express.php:28
+Stack trace:
+#0 [internal function]: webpexpress_autoload('WebPExpress\\Dis...')
+#1 C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\plugins\query-monitor\classes\Util.php(379): ReflectionMethod->__construct('\\WebPExpress\\Di...', 'printMessages')
+#2 C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\plugins\query-monitor\classes\Hook.php(43): QM_Util::populate_callback(Array)
+#3 C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\plugins\query-monitor\classes\Collector.php(220): QM_Hook::process('admin_notices', 'action', Array, true, false)
+#4 C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\plugins\query-monitor\classes\Collectors.php(85): QM_Collector->process_concerns()
+#5 C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\plugins\query-monitor\classes\Dispatcher.php(123): QM_Collectors->process()
+#6 C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\plugins\query-monitor\dispatchers\AJAX.php(53): QM_Dispatcher->get_outputters('headers')
+#7 C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-includes\class-wp-hook.php(324): QM_Dispatcher_AJAX->dispatch('')
+#8 C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#9 C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#10 C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-includes\load.php(1279): do_action('shutdown')
+#11 [internal function]: shutdown_action_hook()
+#12 {main}
+  thrown in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\plugins\webp-express\webp-express.php on line 28
+[02-Apr-2025 10:56:49 UTC] PHP Warning:  file_get_contents(C:\xampp\htdocs\ocdevwp-projet11\motaphoto3/wp-content/plugins/webp-express/webp-express.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-includes\functions.php on line 6893
+[02-Apr-2025 10:56:49 UTC] PHP Warning:  include_once(C:\xampp\htdocs\ocdevwp-projet11\motaphoto3/wp-content/plugins/webp-express/webp-express.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-admin\includes\plugin.php on line 1326
+[02-Apr-2025 10:56:49 UTC] PHP Warning:  include_once(): Failed opening 'C:\xampp\htdocs\ocdevwp-projet11\motaphoto3/wp-content/plugins/webp-express/webp-express.php' for inclusion (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-admin\includes\plugin.php on line 1326
+[02-Apr-2025 11:12:29 UTC] PHP Warning:  Attempt to read property "ID" on string in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\bloc_2photos_dans_single.php on line 16
+[02-Apr-2025 11:18:28 UTC] PHP Warning:  Attempt to read property "ID" on string in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\bloc_2photos_dans_single.php on line 16
+[02-Apr-2025 11:20:00 UTC] PHP Warning:  Attempt to read property "ID" on string in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\bloc_2photos_dans_single.php on line 19
+[02-Apr-2025 11:20:49 UTC] Array
+(
+    [action] => voir_plus_photos
+    [paged] => 2
+)
+
+[02-Apr-2025 11:20:49 UTC] Arguments WP_Query : Array
+(
+    [post_type] => photo
+    [posts_per_page] => 8
+    [paged] => 2
+    [post_status] => publish
+)
+
+[02-Apr-2025 11:20:49 UTC] Nombre de posts trouvés : 16
+[02-Apr-2025 11:20:49 UTC] Arguments AJAX : Array
+(
+    [post_type] => photo
+    [posts_per_page] => 8
+    [paged] => 2
+    [post_status] => publish
+)
+
+[02-Apr-2025 11:24:36 UTC] Array
+(
+    [action] => voir_plus_photos
+    [paged] => 2
+)
+
+[02-Apr-2025 11:24:36 UTC] Arguments WP_Query : Array
+(
+    [post_type] => photo
+    [posts_per_page] => 8
+    [paged] => 2
+    [post_status] => publish
+)
+
+[02-Apr-2025 11:24:36 UTC] Nombre de posts trouvés : 16
+[02-Apr-2025 11:24:36 UTC] Arguments AJAX : Array
+(
+    [post_type] => photo
+    [posts_per_page] => 8
+    [paged] => 2
+    [post_status] => publish
+)
+
+[02-Apr-2025 14:41:21 UTC] Automatic updates starting...
+[02-Apr-2025 14:41:22 UTC]   Automatic plugin updates starting...
+[02-Apr-2025 14:41:22 UTC]   Automatic plugin updates complete.
+[02-Apr-2025 14:41:23 UTC]   Automatic theme updates starting...
+[02-Apr-2025 14:41:23 UTC]   Automatic theme updates complete.
+[02-Apr-2025 14:41:23 UTC] Automatic updates complete.
+[03-Apr-2025 11:47:53 UTC] PHP Notice:  La fonction register_taxonomy a été appelée de façon <strong>incorrecte</strong>. La propriété « name » de la taxonomie « format » (format) ne fonctionne pas avec l’une des propriétés déjà existantes sur le contrôleur de publications de l’API REST. Spécifiez une « rest_base » personnalisée lors de l’enregistrement de la taxonomie pour éviter cette erreur. Veuillez lire <a href="https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/">Débogage dans WordPress</a> (en) pour plus d’informations. (Ce message a été ajouté à la version 5.4.0.) in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-includes\functions.php on line 6114
+[03-Apr-2025 12:32:15 UTC] PHP Warning:  Array to string conversion in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\block_8_photos_filtrables.php on line 320
+[03-Apr-2025 12:32:15 UTC] PHP Warning:  Array to string conversion in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\block_8_photos_filtrables.php on line 320
+[03-Apr-2025 12:32:15 UTC] PHP Warning:  Array to string conversion in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\block_8_photos_filtrables.php on line 320
+[03-Apr-2025 12:32:15 UTC] PHP Warning:  Array to string conversion in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\block_8_photos_filtrables.php on line 320
+[03-Apr-2025 12:32:15 UTC] PHP Warning:  Array to string conversion in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\block_8_photos_filtrables.php on line 320
+[03-Apr-2025 12:32:15 UTC] PHP Warning:  Array to string conversion in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\block_8_photos_filtrables.php on line 320
+[03-Apr-2025 12:32:15 UTC] PHP Warning:  Array to string conversion in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\block_8_photos_filtrables.php on line 320
+[03-Apr-2025 12:32:15 UTC] PHP Warning:  Array to string conversion in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\block_8_photos_filtrables.php on line 320
+[03-Apr-2025 12:59:15 UTC] PHP Warning:  Array to string conversion in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\block_8_photos_filtrables.php on line 320
+[03-Apr-2025 12:59:15 UTC] PHP Warning:  Array to string conversion in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\block_8_photos_filtrables.php on line 320
+[03-Apr-2025 12:59:15 UTC] PHP Warning:  Array to string conversion in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\block_8_photos_filtrables.php on line 320
+[03-Apr-2025 12:59:15 UTC] PHP Warning:  Array to string conversion in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\block_8_photos_filtrables.php on line 320
+[03-Apr-2025 12:59:15 UTC] PHP Warning:  Array to string conversion in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\block_8_photos_filtrables.php on line 320
+[03-Apr-2025 12:59:15 UTC] PHP Warning:  Array to string conversion in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\block_8_photos_filtrables.php on line 320
+[03-Apr-2025 12:59:15 UTC] PHP Warning:  Array to string conversion in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\block_8_photos_filtrables.php on line 320
+[03-Apr-2025 12:59:15 UTC] PHP Warning:  Array to string conversion in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\block_8_photos_filtrables.php on line 320
+[03-Apr-2025 13:00:00 UTC] PHP Warning:  Array to string conversion in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\block_8_photos_filtrables.php on line 320
+[03-Apr-2025 13:00:00 UTC] PHP Warning:  Array to string conversion in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\block_8_photos_filtrables.php on line 320
+[03-Apr-2025 13:00:00 UTC] PHP Warning:  Array to string conversion in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\block_8_photos_filtrables.php on line 320
+[03-Apr-2025 13:00:00 UTC] PHP Warning:  Array to string conversion in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\block_8_photos_filtrables.php on line 320
+[03-Apr-2025 13:00:00 UTC] PHP Warning:  Array to string conversion in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\block_8_photos_filtrables.php on line 320
+[03-Apr-2025 13:00:00 UTC] PHP Warning:  Array to string conversion in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\block_8_photos_filtrables.php on line 320
+[03-Apr-2025 13:00:00 UTC] PHP Warning:  Array to string conversion in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\block_8_photos_filtrables.php on line 320
+[03-Apr-2025 13:00:00 UTC] PHP Warning:  Array to string conversion in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\block_8_photos_filtrables.php on line 320
+[03-Apr-2025 13:14:50 UTC] Automatic updates starting...
+[03-Apr-2025 13:14:50 UTC]   Automatic plugin updates starting...
+[03-Apr-2025 13:14:50 UTC]   Automatic plugin updates complete.
+[03-Apr-2025 13:14:50 UTC]   Automatic theme updates starting...
+[03-Apr-2025 13:14:50 UTC]   Automatic theme updates complete.
+[03-Apr-2025 13:14:50 UTC] Automatic updates complete.
+[03-Apr-2025 14:08:35 UTC] Array
+(
+    [action] => voir_plus_photos
+    [paged] => 2
+)
+
+[03-Apr-2025 14:08:35 UTC] Arguments WP_Query : Array
+(
+    [post_type] => photo
+    [posts_per_page] => 8
+    [paged] => 2
+    [post_status] => publish
+)
+
+[03-Apr-2025 14:08:35 UTC] Nombre de posts trouvés : 16
+[03-Apr-2025 14:08:35 UTC] Arguments AJAX : Array
+(
+    [post_type] => photo
+    [posts_per_page] => 8
+    [paged] => 2
+    [post_status] => publish
+)
+
+[03-Apr-2025 14:19:46 UTC] Array
+(
+    [action] => voir_plus_photos
+    [paged] => 2
+)
+
+[03-Apr-2025 14:19:46 UTC] Arguments WP_Query : Array
+(
+    [post_type] => photo
+    [posts_per_page] => 8
+    [paged] => 2
+    [post_status] => publish
+)
+
+[03-Apr-2025 14:19:46 UTC] Nombre de posts trouvés : 16
+[03-Apr-2025 14:19:46 UTC] Arguments AJAX : Array
+(
+    [post_type] => photo
+    [posts_per_page] => 8
+    [paged] => 2
+    [post_status] => publish
+)
+
+[03-Apr-2025 14:20:50 UTC] Array
+(
+    [action] => voir_plus_photos
+    [paged] => 2
+)
+
+[03-Apr-2025 14:20:50 UTC] Arguments WP_Query : Array
+(
+    [post_type] => photo
+    [posts_per_page] => 8
+    [paged] => 2
+    [post_status] => publish
+)
+
+[03-Apr-2025 14:20:50 UTC] Nombre de posts trouvés : 16
+[03-Apr-2025 14:20:50 UTC] Arguments AJAX : Array
+(
+    [post_type] => photo
+    [posts_per_page] => 8
+    [paged] => 2
+    [post_status] => publish
+)
+
+[03-Apr-2025 14:25:21 UTC] Array
+(
+    [action] => voir_plus_photos
+    [paged] => 2
+)
+
+[03-Apr-2025 14:25:21 UTC] Arguments WP_Query : Array
+(
+    [post_type] => photo
+    [posts_per_page] => 8
+    [paged] => 2
+    [post_status] => publish
+)
+
+[03-Apr-2025 14:25:21 UTC] Nombre de posts trouvés : 16
+[03-Apr-2025 14:25:21 UTC] Arguments AJAX : Array
+(
+    [post_type] => photo
+    [posts_per_page] => 8
+    [paged] => 2
+    [post_status] => publish
+)
+
+[03-Apr-2025 15:21:37 UTC] Array
+(
+    [action] => voir_plus_photos
+    [paged] => 2
+)
+
+[03-Apr-2025 15:21:37 UTC] Arguments WP_Query : Array
+(
+    [post_type] => photo
+    [posts_per_page] => 8
+    [paged] => 2
+    [post_status] => publish
+)
+
+[03-Apr-2025 15:21:37 UTC] Nombre de posts trouvés : 16
+[03-Apr-2025 15:21:37 UTC] Arguments AJAX : Array
+(
+    [post_type] => photo
+    [posts_per_page] => 8
+    [paged] => 2
+    [post_status] => publish
+)
+
+[03-Apr-2025 17:06:21 UTC] PHP Parse error:  syntax error, unexpected token ":", expecting "," or ";" in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\block_8_photos_filtrables.php on line 351
+[03-Apr-2025 17:06:39 UTC] PHP Parse error:  syntax error, unexpected token ":", expecting "," or ";" in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\block_8_photos_filtrables.php on line 351
+[03-Apr-2025 17:06:45 UTC] PHP Parse error:  syntax error, unexpected token ":", expecting "," or ";" in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\block_8_photos_filtrables.php on line 351
+[03-Apr-2025 17:07:27 UTC] PHP Parse error:  syntax error, unexpected token ":", expecting "," or ";" in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\block_8_photos_filtrables.php on line 352
+[03-Apr-2025 17:07:31 UTC] PHP Parse error:  syntax error, unexpected token ":", expecting "," or ";" in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\block_8_photos_filtrables.php on line 352
+[03-Apr-2025 17:07:59 UTC] PHP Parse error:  syntax error, unexpected token ":", expecting "," or ";" in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\block_8_photos_filtrables.php on line 352
+[03-Apr-2025 17:10:42 UTC] PHP Parse error:  syntax error, unexpected token ":", expecting "," or ";" in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\block_8_photos_filtrables.php on line 352
+[04-Apr-2025 03:55:17 UTC] Erreur d’événement de déplanification de tâche pour le crochet wp_cache_gc. Code d’erreur : could_not_set. Message d’erreur : La liste des évènements planifiés n’a pas pu être sauvegardée.. Données : {"schedule":false,"args":[]}
+[04-Apr-2025 03:55:17 UTC] Erreur d’événement de replanification de tâche pour le crochet wp_privacy_delete_old_export_files. Code d’erreur : could_not_set. Message d’erreur : La liste des évènements planifiés n’a pas pu être sauvegardée.. Données : {"schedule":"hourly","args":[],"interval":3600}
+[04-Apr-2025 03:55:17 UTC] Erreur d’événement de déplanification de tâche pour le crochet wp_privacy_delete_old_export_files. Code d’erreur : could_not_set. Message d’erreur : La liste des évènements planifiés n’a pas pu être sauvegardée.. Données : {"schedule":"hourly","args":[],"interval":3600}
+[04-Apr-2025 03:55:17 UTC] Erreur d’événement de replanification de tâche pour le crochet wp_update_user_counts. Code d’erreur : could_not_set. Message d’erreur : La liste des évènements planifiés n’a pas pu être sauvegardée.. Données : {"schedule":"twicedaily","args":[],"interval":43200}
+[04-Apr-2025 03:55:17 UTC] Erreur d’événement de déplanification de tâche pour le crochet wp_update_user_counts. Code d’erreur : could_not_set. Message d’erreur : La liste des évènements planifiés n’a pas pu être sauvegardée.. Données : {"schedule":"twicedaily","args":[],"interval":43200}
+[04-Apr-2025 03:55:18 UTC] Erreur d’événement de replanification de tâche pour le crochet wp_version_check. Code d’erreur : could_not_set. Message d’erreur : La liste des évènements planifiés n’a pas pu être sauvegardée.. Données : {"schedule":"twicedaily","args":[],"interval":43200}
+[04-Apr-2025 03:55:20 UTC] Automatic updates starting...
+[04-Apr-2025 03:55:21 UTC]   Automatic plugin updates starting...
+[04-Apr-2025 03:55:21 UTC]   Automatic plugin updates complete.
+[04-Apr-2025 03:55:22 UTC]   Automatic theme updates starting...
+[04-Apr-2025 03:55:22 UTC]   Automatic theme updates complete.
+[04-Apr-2025 03:55:22 UTC] Automatic updates complete.
+[04-Apr-2025 04:25:31 UTC] Automatic updates starting...
+[04-Apr-2025 04:25:32 UTC]   Automatic plugin updates starting...
+[04-Apr-2025 04:25:32 UTC]   Automatic plugin updates complete.
+[04-Apr-2025 04:25:32 UTC]   Automatic theme updates starting...
+[04-Apr-2025 04:25:32 UTC]   Automatic theme updates complete.
+[04-Apr-2025 04:25:32 UTC] Automatic updates complete.
+[04-Apr-2025 04:25:37 UTC] Erreur d’événement de replanification de tâche pour le crochet action_scheduler_run_queue. Code d’erreur : could_not_set. Message d’erreur : La liste des évènements planifiés n’a pas pu être sauvegardée.. Données : {"schedule":"every_minute","args":["WP Cron"],"interval":60}
+[04-Apr-2025 04:45:56 UTC] PHP Warning:  Undefined variable $postTitleJS in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\block_8_photos_filtrables.php on line 32
+[04-Apr-2025 04:45:56 UTC] PHP Warning:  Undefined variable $imagePostJS in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\block_8_photos_filtrables.php on line 33
+[04-Apr-2025 04:45:56 UTC] PHP Warning:  Undefined variable $postTitleJS in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\block_8_photos_filtrables.php on line 32
+[04-Apr-2025 04:45:56 UTC] PHP Warning:  Undefined variable $imagePostJS in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\block_8_photos_filtrables.php on line 33
+[04-Apr-2025 04:45:56 UTC] PHP Warning:  Undefined variable $postTitleJS in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\block_8_photos_filtrables.php on line 32
+[04-Apr-2025 04:45:56 UTC] PHP Warning:  Undefined variable $imagePostJS in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\block_8_photos_filtrables.php on line 33
+[04-Apr-2025 04:45:56 UTC] PHP Warning:  Undefined variable $postTitleJS in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\block_8_photos_filtrables.php on line 32
+[04-Apr-2025 04:45:56 UTC] PHP Warning:  Undefined variable $imagePostJS in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\block_8_photos_filtrables.php on line 33
+[04-Apr-2025 04:45:56 UTC] PHP Warning:  Undefined variable $postTitleJS in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\block_8_photos_filtrables.php on line 32
+[04-Apr-2025 04:45:56 UTC] PHP Warning:  Undefined variable $imagePostJS in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\block_8_photos_filtrables.php on line 33
+[04-Apr-2025 04:45:56 UTC] PHP Warning:  Undefined variable $postTitleJS in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\block_8_photos_filtrables.php on line 32
+[04-Apr-2025 04:45:56 UTC] PHP Warning:  Undefined variable $imagePostJS in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\block_8_photos_filtrables.php on line 33
+[04-Apr-2025 04:45:56 UTC] PHP Warning:  Undefined variable $postTitleJS in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\block_8_photos_filtrables.php on line 32
+[04-Apr-2025 04:45:56 UTC] PHP Warning:  Undefined variable $imagePostJS in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\block_8_photos_filtrables.php on line 33
+[04-Apr-2025 04:45:56 UTC] PHP Warning:  Undefined variable $postTitleJS in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\block_8_photos_filtrables.php on line 32
+[04-Apr-2025 04:45:56 UTC] PHP Warning:  Undefined variable $imagePostJS in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\block_8_photos_filtrables.php on line 33
+[04-Apr-2025 04:45:56 UTC] PHP Warning:  Undefined variable $postTitleJS in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\block_8_photos_filtrables.php on line 32
+[04-Apr-2025 04:45:56 UTC] PHP Warning:  Undefined variable $imagePostJS in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\block_8_photos_filtrables.php on line 33
+[04-Apr-2025 04:45:56 UTC] PHP Warning:  Undefined variable $postTitleJS in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\block_8_photos_filtrables.php on line 32
+[04-Apr-2025 04:45:56 UTC] PHP Warning:  Undefined variable $imagePostJS in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\block_8_photos_filtrables.php on line 33
+[04-Apr-2025 04:45:56 UTC] PHP Warning:  Undefined variable $postTitleJS in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\block_8_photos_filtrables.php on line 32
+[04-Apr-2025 04:45:56 UTC] PHP Warning:  Undefined variable $imagePostJS in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\block_8_photos_filtrables.php on line 33
+[04-Apr-2025 04:45:56 UTC] PHP Warning:  Undefined variable $postTitleJS in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\block_8_photos_filtrables.php on line 32
+[04-Apr-2025 04:45:56 UTC] PHP Warning:  Undefined variable $imagePostJS in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\block_8_photos_filtrables.php on line 33
+[04-Apr-2025 04:45:56 UTC] PHP Warning:  Undefined variable $postTitleJS in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\block_8_photos_filtrables.php on line 32
+[04-Apr-2025 04:45:56 UTC] PHP Warning:  Undefined variable $imagePostJS in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\block_8_photos_filtrables.php on line 33
+[04-Apr-2025 04:45:56 UTC] PHP Warning:  Undefined variable $postTitleJS in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\block_8_photos_filtrables.php on line 32
+[04-Apr-2025 04:45:56 UTC] PHP Warning:  Undefined variable $imagePostJS in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\block_8_photos_filtrables.php on line 33
+[04-Apr-2025 04:45:56 UTC] PHP Warning:  Undefined variable $postTitleJS in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\block_8_photos_filtrables.php on line 32
+[04-Apr-2025 04:45:56 UTC] PHP Warning:  Undefined variable $imagePostJS in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\block_8_photos_filtrables.php on line 33
+[04-Apr-2025 04:45:56 UTC] PHP Warning:  Undefined variable $postTitleJS in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\block_8_photos_filtrables.php on line 32
+[04-Apr-2025 04:45:56 UTC] PHP Warning:  Undefined variable $imagePostJS in C:\xampp\htdocs\ocdevwp-projet11\motaphoto3\wp-content\themes\astra-child\template-parts\block_8_photos_filtrables.php on line 33
+[04-Apr-2025 05:48:39 UTC] Array
+(
+    [action] => voir_plus_photos
+    [paged] => 2
+)
+
+[04-Apr-2025 05:48:39 UTC] Arguments WP_Query : Array
+(
+    [post_type] => photo
+    [posts_per_page] => 8
+    [paged] => 2
+    [post_status] => publish
+)
+
+[04-Apr-2025 05:48:39 UTC] Nombre de posts trouvés : 16
+[04-Apr-2025 05:48:39 UTC] Arguments AJAX : Array
+(
+    [post_type] => photo
+    [posts_per_page] => 8
+    [paged] => 2
+    [post_status] => publish
+)
+
+[04-Apr-2025 05:48:59 UTC] Array
+(
+    [action] => voir_plus_photos
+    [paged] => 2
+)
+
+[04-Apr-2025 05:48:59 UTC] Arguments WP_Query : Array
+(
+    [post_type] => photo
+    [posts_per_page] => 8
+    [paged] => 2
+    [post_status] => publish
+)
+
+[04-Apr-2025 05:48:59 UTC] Nombre de posts trouvés : 16
+[04-Apr-2025 05:48:59 UTC] Arguments AJAX : Array
+(
+    [post_type] => photo
+    [posts_per_page] => 8
+    [paged] => 2
+    [post_status] => publish
+)
+
+[04-Apr-2025 05:52:29 UTC] Array
+(
+    [action] => voir_plus_photos
+    [paged] => 2
+)
+
+[04-Apr-2025 05:52:29 UTC] Arguments WP_Query : Array
+(
+    [post_type] => photo
+    [posts_per_page] => 8
+    [paged] => 2
+    [post_status] => publish
+)
+
+[04-Apr-2025 05:52:29 UTC] Nombre de posts trouvés : 16
+[04-Apr-2025 05:52:29 UTC] Arguments AJAX : Array
+(
+    [post_type] => photo
+    [posts_per_page] => 8
+    [paged] => 2
+    [post_status] => publish
+)
+
+[04-Apr-2025 06:00:49 UTC] Array
+(
+    [action] => voir_plus_photos
+    [paged] => 2
+)
+
+[04-Apr-2025 06:00:49 UTC] Arguments WP_Query : Array
+(
+    [post_type] => photo
+    [posts_per_page] => 8
+    [paged] => 2
+    [post_status] => publish
+)
+
+[04-Apr-2025 06:00:49 UTC] Nombre de posts trouvés : 16
+[04-Apr-2025 06:00:49 UTC] Arguments AJAX : Array
+(
+    [post_type] => photo
+    [posts_per_page] => 8
+    [paged] => 2
+    [post_status] => publish
+)
+
+[04-Apr-2025 06:02:43 UTC] Array
+(
+    [action] => voir_plus_photos
+    [paged] => 2
+)
+
+[04-Apr-2025 06:02:43 UTC] Arguments WP_Query : Array
+(
+    [post_type] => photo
+    [posts_per_page] => 8
+    [paged] => 2
+    [post_status] => publish
+)
+
+[04-Apr-2025 06:02:43 UTC] Nombre de posts trouvés : 16
+[04-Apr-2025 06:02:43 UTC] Arguments AJAX : Array
+(
+    [post_type] => photo
+    [posts_per_page] => 8
+    [paged] => 2
+    [post_status] => publish
+)
+
+[04-Apr-2025 06:07:54 UTC] Array
+(
+    [action] => voir_plus_photos
+    [paged] => 2
+)
+
+[04-Apr-2025 06:07:54 UTC] Arguments WP_Query : Array
+(
+    [post_type] => photo
+    [posts_per_page] => 8
+    [paged] => 2
+    [post_status] => publish
+)
+
+[04-Apr-2025 06:07:54 UTC] Nombre de posts trouvés : 16
+[04-Apr-2025 06:07:54 UTC] Arguments AJAX : Array
+(
+    [post_type] => photo
+    [posts_per_page] => 8
+    [paged] => 2
+    [post_status] => publish
+)
+
+[04-Apr-2025 06:09:36 UTC] Array
+(
+    [action] => voir_plus_photos
+    [paged] => 2
+)
+
+[04-Apr-2025 06:09:36 UTC] Arguments WP_Query : Array
+(
+    [post_type] => photo
+    [posts_per_page] => 8
+    [paged] => 2
+    [post_status] => publish
+)
+
+[04-Apr-2025 06:09:36 UTC] Nombre de posts trouvés : 16
+[04-Apr-2025 06:09:36 UTC] Arguments AJAX : Array
+(
+    [post_type] => photo
+    [posts_per_page] => 8
+    [paged] => 2
+    [post_status] => publish
+)
+
+[04-Apr-2025 06:18:13 UTC] Array
+(
+    [action] => voir_plus_photos
+    [paged] => 2
+)
+
+[04-Apr-2025 06:18:13 UTC] Arguments WP_Query : Array
+(
+    [post_type] => photo
+    [posts_per_page] => 8
+    [paged] => 2
+    [post_status] => publish
+)
+
+[04-Apr-2025 06:18:13 UTC] Nombre de posts trouvés : 16
+[04-Apr-2025 06:18:13 UTC] Arguments AJAX : Array
+(
+    [post_type] => photo
+    [posts_per_page] => 8
+    [paged] => 2
+    [post_status] => publish
+)
+
+[04-Apr-2025 06:23:14 UTC] Array
+(
+    [action] => voir_plus_photos
+    [paged] => 2
+)
+
+[04-Apr-2025 06:23:14 UTC] Arguments WP_Query : Array
+(
+    [post_type] => photo
+    [posts_per_page] => 8
+    [paged] => 2
+    [post_status] => publish
+)
+
+[04-Apr-2025 06:23:14 UTC] Nombre de posts trouvés : 16
+[04-Apr-2025 06:23:14 UTC] Arguments AJAX : Array
+(
+    [post_type] => photo
+    [posts_per_page] => 8
+    [paged] => 2
+    [post_status] => publish
+)
+
+[04-Apr-2025 06:25:26 UTC] Array
+(
+    [action] => voir_plus_photos
+    [paged] => 2
+)
+
+[04-Apr-2025 06:25:26 UTC] Arguments WP_Query : Array
+(
+    [post_type] => photo
+    [posts_per_page] => 8
+    [paged] => 2
+    [post_status] => publish
+)
+
+[04-Apr-2025 06:25:26 UTC] Nombre de posts trouvés : 16
+[04-Apr-2025 06:25:26 UTC] Arguments AJAX : Array
+(
+    [post_type] => photo
+    [posts_per_page] => 8
+    [paged] => 2
+    [post_status] => publish
+)
+
+[04-Apr-2025 06:39:19 UTC] Array
+(
+    [action] => voir_plus_photos
+    [paged] => 2
+)
+
+[04-Apr-2025 06:39:19 UTC] Arguments WP_Query : Array
+(
+    [post_type] => photo
+    [posts_per_page] => 8
+    [paged] => 2
+    [post_status] => publish
+)
+
+[04-Apr-2025 06:39:19 UTC] Nombre de posts trouvés : 16
+[04-Apr-2025 06:39:19 UTC] Arguments AJAX : Array
+(
+    [post_type] => photo
+    [posts_per_page] => 8
+    [paged] => 2
+    [post_status] => publish
+)
+
+[04-Apr-2025 06:42:41 UTC] Array
+(
+    [action] => voir_plus_photos
+    [paged] => 2
+)
+
+[04-Apr-2025 06:42:41 UTC] Arguments WP_Query : Array
+(
+    [post_type] => photo
+    [posts_per_page] => 8
+    [paged] => 2
+    [post_status] => publish
+)
+
+[04-Apr-2025 06:42:41 UTC] Nombre de posts trouvés : 16
+[04-Apr-2025 06:42:41 UTC] Arguments AJAX : Array
+(
+    [post_type] => photo
+    [posts_per_page] => 8
+    [paged] => 2
+    [post_status] => publish
+)
+
+[04-Apr-2025 06:45:27 UTC] Array
+(
+    [action] => voir_plus_photos
+    [paged] => 2
+)
+
+[04-Apr-2025 06:45:27 UTC] Arguments WP_Query : Array
+(
+    [post_type] => photo
+    [posts_per_page] => 8
+    [paged] => 2
+    [post_status] => publish
+)
+
+[04-Apr-2025 06:45:27 UTC] Nombre de posts trouvés : 16
+[04-Apr-2025 06:45:27 UTC] Arguments AJAX : Array
+(
+    [post_type] => photo
+    [posts_per_page] => 8
+    [paged] => 2
+    [post_status] => publish
+)
+
+[04-Apr-2025 06:47:04 UTC] Array
+(
+    [action] => voir_plus_photos
+    [paged] => 2
+)
+
+[04-Apr-2025 06:47:04 UTC] Arguments WP_Query : Array
+(
+    [post_type] => photo
+    [posts_per_page] => 8
+    [paged] => 2
+    [post_status] => publish
+)
+
+[04-Apr-2025 06:47:04 UTC] Nombre de posts trouvés : 16
+[04-Apr-2025 06:47:04 UTC] Arguments AJAX : Array
+(
+    [post_type] => photo
+    [posts_per_page] => 8
+    [paged] => 2
+    [post_status] => publish
+)
+
+[04-Apr-2025 06:49:12 UTC] Array
+(
+    [action] => voir_plus_photos
+    [paged] => 2
+)
+
+[04-Apr-2025 06:49:12 UTC] Arguments WP_Query : Array
+(
+    [post_type] => photo
+    [posts_per_page] => 8
+    [paged] => 2
+    [post_status] => publish
+)
+
+[04-Apr-2025 06:49:12 UTC] Nombre de posts trouvés : 16
+[04-Apr-2025 06:49:12 UTC] Arguments AJAX : Array
+(
+    [post_type] => photo
+    [posts_per_page] => 8
+    [paged] => 2
+    [post_status] => publish
+)
+
+[04-Apr-2025 06:53:14 UTC] Array
+(
+    [action] => voir_plus_photos
+    [paged] => 2
+)
+
+[04-Apr-2025 06:53:14 UTC] Arguments WP_Query : Array
+(
+    [post_type] => photo
+    [posts_per_page] => 8
+    [paged] => 2
+    [post_status] => publish
+)
+
+[04-Apr-2025 06:53:14 UTC] Nombre de posts trouvés : 16
+[04-Apr-2025 06:53:14 UTC] Arguments AJAX : Array
+(
+    [post_type] => photo
+    [posts_per_page] => 8
+    [paged] => 2
+    [post_status] => publish
+)
+
+[04-Apr-2025 06:54:08 UTC] Array
+(
+    [action] => voir_plus_photos
+    [paged] => 2
+)
+
+[04-Apr-2025 06:54:08 UTC] Arguments WP_Query : Array
+(
+    [post_type] => photo
+    [posts_per_page] => 8
+    [paged] => 2
+    [post_status] => publish
+)
+
+[04-Apr-2025 06:54:08 UTC] Nombre de posts trouvés : 16
+[04-Apr-2025 06:54:08 UTC] Arguments AJAX : Array
+(
+    [post_type] => photo
+    [posts_per_page] => 8
+    [paged] => 2
+    [post_status] => publish
+)
+
+[04-Apr-2025 06:57:54 UTC] Array
+(
+    [action] => voir_plus_photos
+    [paged] => 2
+)
+
+[04-Apr-2025 06:57:54 UTC] Arguments WP_Query : Array
+(
+    [post_type] => photo
+    [posts_per_page] => 8
+    [paged] => 2
+    [post_status] => publish
+)
+
+[04-Apr-2025 06:57:54 UTC] Nombre de posts trouvés : 16
+[04-Apr-2025 06:57:54 UTC] Arguments AJAX : Array
+(
+    [post_type] => photo
+    [posts_per_page] => 8
+    [paged] => 2
+    [post_status] => publish
+)
+
+[04-Apr-2025 06:59:24 UTC] Array
+(
+    [action] => voir_plus_photos
+    [paged] => 2
+)
+
+[04-Apr-2025 06:59:24 UTC] Arguments WP_Query : Array
+(
+    [post_type] => photo
+    [posts_per_page] => 8
+    [paged] => 2
+    [post_status] => publish
+)
+
+[04-Apr-2025 06:59:24 UTC] Nombre de posts trouvés : 16
+[04-Apr-2025 06:59:24 UTC] Arguments AJAX : Array
+(
+    [post_type] => photo
+    [posts_per_page] => 8
+    [paged] => 2
+    [post_status] => publish
+)
+

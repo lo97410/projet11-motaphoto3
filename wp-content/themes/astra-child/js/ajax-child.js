@@ -78,7 +78,7 @@ jQuery(document).ready(function($) {
             console.table(photo);//////
             
             htmlDivPhotosContent = htmlDivPhotosContent + "<a href='"+photo['url']+"' title='"+photo['titre']+"' target='_blank' >";
-            htmlDivPhotosContent = htmlDivPhotosContent + "<img src='"+photo['image']+"' alt='"+photo['titre']+"' title='"+photo['titre']+"' >";
+            htmlDivPhotosContent = htmlDivPhotosContent + "<img src='"+photo['image']+".webp' alt='"+photo['titre']+"' title='"+photo['titre']+"' >";
             htmlDivPhotosContent = htmlDivPhotosContent + "</a>";
             });// Fin de $.each(photos, function(i, photo)
 
@@ -94,7 +94,7 @@ jQuery(document).ready(function($) {
     }// Fin de function afficherPhotos(photos)
 
 
-    /*------------------------------------------------------------ Action bouton Voir plus ------------------------------------------------------------------------------*/
+    /*--------------------------------------------- Action bouton Voir plus ------------------------------------------------------*/
     // Attachement de l'événement 'click' sur le bouton
     $('#buttonVoirPlus').on('click', function() {
         voirPlus();  // Appel de la fonction
@@ -140,7 +140,6 @@ jQuery(document).ready(function($) {
             }
         });// Fin de $.ajax(
 
-        //-=====================================================> $('#buttonVoirPlus').hide(); !!!!!!!!!!!!!!!!!!!!!!4+
     }// Fin de function voirPlus()
 
 
@@ -155,11 +154,41 @@ jQuery(document).ready(function($) {
         if (photos && photos.length > 0) {
             $.each(photos, function(i, photo) {
             console.table(photo);//////
-            
-            htmlDivPhotosContentAccueil = htmlDivPhotosContentAccueil + "<a href='"+photo['url']+"' title='"+photo['titre']+"' target='_blank' >";
-            htmlDivPhotosContentAccueil = htmlDivPhotosContentAccueil + "<img src='"+photo['image']+"' alt='"+photo['titre']+"' title='"+photo['titre']+"' >";
+
+            htmlDivPhotosContentAccueil = htmlDivPhotosContentAccueil + "<article class='photoAccueil' >";
+
+            htmlDivPhotosContentAccueil = htmlDivPhotosContentAccueil + "<img src='"+photo['image']+".webp' alt='"+photo['titre']+"' title='"+photo['titre']+"' >";
+        
+            // Hover photo
+            htmlDivPhotosContentAccueil = htmlDivPhotosContentAccueil + "<div class='hoverphoto' >";
+
+            htmlDivPhotosContentAccueil = htmlDivPhotosContentAccueil + "<div class='iconFullScreen' >";
+            htmlDivPhotosContentAccueil = htmlDivPhotosContentAccueil + "<a href='#' title='Voir en plein écran' id='lienPleinEcran'  onclick='fullScreenPhoto("+photo['id']+")'>";
+
+            htmlDivPhotosContentAccueil = htmlDivPhotosContentAccueil + "<span><i class='fa-solid fa-expand' ></i></span>";
             htmlDivPhotosContentAccueil = htmlDivPhotosContentAccueil + "</a>";
+            htmlDivPhotosContentAccueil = htmlDivPhotosContentAccueil + "</div>";
+
+            htmlDivPhotosContentAccueil = htmlDivPhotosContentAccueil + "<div class='iconeEye' >";
+            htmlDivPhotosContentAccueil = htmlDivPhotosContentAccueil + "<a href='"+photo['url']+"' title='Voir la fiche de : "+photo['titre']+"' target='_blank' >";
+            htmlDivPhotosContentAccueil = htmlDivPhotosContentAccueil + "<i class='fa-regular fa-eye' ></i>";
+            htmlDivPhotosContentAccueil = htmlDivPhotosContentAccueil + "</a>";
+            htmlDivPhotosContentAccueil = htmlDivPhotosContentAccueil + "</div>";
+
+            htmlDivPhotosContentAccueil = htmlDivPhotosContentAccueil + "<div class='titrecategorie' >";
+            htmlDivPhotosContentAccueil = htmlDivPhotosContentAccueil + "<span>"+photo['titre']+"</span> <span></span>";
+            htmlDivPhotosContentAccueil = htmlDivPhotosContentAccueil + "</div>";
+            htmlDivPhotosContentAccueil = htmlDivPhotosContentAccueil + "</div>";
+
+            htmlDivPhotosContentAccueil = htmlDivPhotosContentAccueil + "</article>";
+
             });// Fin de $.each(photos, function(i, photo)
+
+            // Lightbox photo plein écran
+            htmlDivPhotosContentAccueil = htmlDivPhotosContentAccueil + "<div class='lightboxPhoto' >";
+            htmlDivPhotosContentAccueil = htmlDivPhotosContentAccueil + "<img src='' alt='' title='' id='lightboxPhotoImg' >";
+            htmlDivPhotosContentAccueil = htmlDivPhotosContentAccueil + "<div id='closeFullScreen' title='Fermer la photo' > X </div>";
+            htmlDivPhotosContentAccueil = htmlDivPhotosContentAccueil +"</div>";
 
         // On ajoute le HTML dans le div
         divContainerPhotosAccueil.html(htmlDivPhotosContentAccueil);
@@ -170,5 +199,12 @@ jQuery(document).ready(function($) {
             //console.log("Aucune photo trouvée");//////
         }// Fin de if (photos && photos.length > 0) + else
     }// Fin de function afficherVoirPlusPhotos(plusDePhotos)
+
+    // Fermeture de la photo plein écran
+    $("#closeFullScreen").on("click", function() {
+        $(".lightboxPhoto").animate({ opacity: 0 }, 500, function() {
+            $(this).css("display", "none");
+        });
+    });
 
 });// Fin de jQuery(document).ready(function($)

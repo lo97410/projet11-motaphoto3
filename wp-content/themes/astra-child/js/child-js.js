@@ -100,6 +100,18 @@ function showModaleContact(refPhotoToSend) {
     });// Fin de formModaleContact.addEventListener("wpcf7submit"
 }// Fin de function showModaleContact(refPhotoToSend)
 
+// Survol des photos en page d'accueil
+jQuery(document).ready(function() {
+    jQuery(".hoverphoto").hover(
+        function() {
+            jQuery(this).css('opacity', 1);
+        },
+        function() {
+            jQuery(this).css('opacity', 0);
+        }
+    );
+});
+
 
 
 

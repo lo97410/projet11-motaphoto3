@@ -76,6 +76,12 @@ function child_theme_enqueue_css_js() {
 }
 add_action('wp_enqueue_scripts', 'child_theme_enqueue_css_js' );
 
+// Icones Font awesome
+/*function add_font_awesome() {
+    wp_enqueue_style('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css', array(), '6.5.1');
+}
+add_action('wp_enqueue_scripts', 'add_font_awesome');*/
+
 
 /*-------------------------------- Inclusion template part dans single.php -----------------------------*/
 function astra_child_single_template_part() {
@@ -274,4 +280,8 @@ function voir_plus_photos_ajax() {
 add_action('wp_ajax_voir_plus_photos', 'voir_plus_photos_ajax');
 add_action('wp_ajax_nopriv_voir_plus_photos', 'voir_plus_photos_ajax');
 
-
+// Vérifier le chargement de JQuery
+function charger_jquery_personnalise() {
+    wp_enqueue_script('jquery');
+}
+add_action('wp_enqueue_scripts', 'charger_jquery_personnalise');
